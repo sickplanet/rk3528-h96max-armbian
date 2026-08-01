@@ -1,17 +1,21 @@
 # H96 Max RK3528 Armbian patch
 
-Small overlay for building a minimal Armbian vendor-kernel image for the H96
-Max RK3528.
+Small overlay for building a minimal Armbian kernel image for the H96
+Max RK3528. 
 
 Working:
 
-- boot from SD-card
+- boot from SD-card with stock firmware
 - Ethernet
 - HDMI
 - others not tested
 
 The [original stock Android boot log](logs/stock-boot.log) is included for hardware
 comparison.
+
+The full device tree extracted from the original boot image is included for
+reference as [original-rk3528-evb2-ddr3-v10.dts](dts/original-rk3528-evb2-ddr3-v10.dts).
+
 Board photos and UART port locations: https://forum.armbian.com/topic/59122-h96-max-rk3528-cannot-boot-armbian-from-tfsd-card/
 
 ## Build
@@ -55,3 +59,7 @@ sudo dd \
 
 sync
 ```
+
+## License
+
+Licensed under [GPL-2.0](LICENSE).
