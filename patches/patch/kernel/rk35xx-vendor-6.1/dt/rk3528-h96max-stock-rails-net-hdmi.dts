@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/dts-v1/;
+
+#include "rk3528-h96max-stock-rails-net.dts"
+
+/ {
+	model = "H96 Max RK3528";
+	compatible = "h96,h96max-rk3528", "rockchip,rk3528";
+};
+
+&vop {
+	ports {
+		/* VP0: Cluster0 (bit 0), Esmart0/1/2 (bits 2, 3, 8). */
+		port@0 {
+			rockchip,plane-mask = <0x10d>;
+			rockchip,primary-plane = <2>; /* Esmart0 */
+		};
+	};
+};
+
+&route_tve { status = "disabled"; };

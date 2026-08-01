@@ -1,0 +1,27 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: H96 Max bring-up <noreply@example.invalid>
+Date: Sat, 1 Aug 2026 00:00:00 +0000
+Subject: [PATCH] phy: rockchip: inno-hdmi: support 50.25 MHz pixel clock
+
+The H96 Max HDMI panel advertises 1024x600@60 with a 50.25 MHz pixel clock.
+The RK3528 HDMI PHY's fixed PLL table has no entry for that rate.  Add one
+using the existing 40 MHz divider tuple with a 24 MHz x 201/2 PLL setting.
+
+---
+ drivers/phy/rockchip/phy-rockchip-inno-hdmi-phy.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/phy/rockchip/phy-rockchip-inno-hdmi-phy.c b/drivers/phy/rockchip/phy-rockchip-inno-hdmi-phy.c
+index 111111111111..222222222222 100644
+--- a/drivers/phy/rockchip/phy-rockchip-inno-hdmi-phy.c
++++ b/drivers/phy/rockchip/phy-rockchip-inno-hdmi-phy.c
+@@ -241,6 +241,7 @@ static const struct pre_pll_config pre_pll_cfg_table[] = {
+ 	{ 27000000,  27000000, 1,  90, 3, 2, 2, 10, 3, 3,  4, 0, 0},
+ 	{ 27000000,  33750000, 1,  90, 1, 3, 3, 10, 3, 3,  4, 0, 0},
+ 	{ 40000000,  40000000, 1,  80, 2, 2, 2, 12, 2, 2,  2, 0, 0},
++	{ 50250000,  50250000, 2, 201, 2, 2, 2, 12, 2, 2,  2, 0, 0},
+ 	{ 40000000,  50000000, 1, 100, 2, 2, 2,  1, 0, 0, 15, 0, 0},
+ 	{ 59341000,  59341000, 1,  98, 3, 1, 2,  1, 3, 3,  4, 0, 0},
+ 	{ 59400000,  59400000, 1,  99, 3, 1, 1,  1, 3, 3,  4, 0, 0},
+-- 
+2.43.0

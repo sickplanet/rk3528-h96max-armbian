@@ -1,0 +1,2193 @@
+DDR V1.05 4bit PCB 2eef4a672d huan.he 23/04/14-10:58:56
+LP4/4x derate disable, other dram:1x trefi
+ddrconfig:15
+DDR3, 324MHz
+BW=32 Col=11 Bk=8 CS0 Row=16 CS=1 Die BW=16 Size=4096MB
+tdqss: cs0 dqs0: 602ps, dqs1: 482ps, dqs2: 675ps, dqs3: 723ps, 
+
+change to: 324MHz
+clk skew:0x64
+
+change to: 528MHz
+clk skew:0x64
+
+change to: 666MHz
+clk skew:0x64
+
+change to: 786MHz(final freq)
+clk skew:0x64
+PHY drv:clk:50,ca:28,DQ:40,odt:145
+vrefinner:50%, vrefout:50%
+dram drv:34,odt:60
+cs 0:
+the read training result:
+DQS0:0x58, DQS1:0x5c, DQS2:0x51, DQS3:0x50, 
+min  : 0x7 0x11  0xc  0xe  0xe  0x2  0x1  0x8 , 0xd  0xd  0xb  0x8  0x2  0x2  0x1  0x1 ,
+       0x6  0x9  0x8  0x7  0x9  0x4  0x2  0x6 , 0x2  0x8  0x9  0x4  0xa  0x6  0xa  0x8 ,
+mid  :0x2d 0x38 0x33 0x34 0x36 0x28 0x26 0x2e ,0x37 0x38 0x35 0x32 0x2c 0x2b 0x29 0x29 ,
+      0x28 0x30 0x2d 0x2d 0x2f 0x27 0x28 0x2e ,0x25 0x2e 0x30 0x29 0x32 0x2b 0x31 0x2e ,
+max  :0x54 0x5f 0x5a 0x5a 0x5e 0x4f 0x4c 0x54 ,0x62 0x63 0x60 0x5c 0x57 0x54 0x52 0x51 ,
+      0x4a 0x57 0x53 0x53 0x56 0x4a 0x4f 0x57 ,0x48 0x55 0x58 0x4e 0x5a 0x50 0x58 0x54 ,
+range:0x4d 0x4e 0x4e 0x4c 0x50 0x4d 0x4b 0x4c ,0x55 0x56 0x55 0x54 0x55 0x52 0x51 0x50 ,
+      0x44 0x4e 0x4b 0x4c 0x4d 0x46 0x4d 0x51 ,0x46 0x4d 0x4f 0x4a 0x50 0x4a 0x4e 0x4c ,
+the write training result:
+DQS0:0xa0, DQS1:0x94, DQS2:0xa7, DQS3:0xac, 
+min  :0x82 0x89 0x88 0x87 0x8a 0x7c 0x7c 0x82 0x7e ,0x7a 0x7b 0x79 0x78 0x73 0x71 0x6f 0x72 0x75 ,
+      0x89 0x91 0x8f 0x8c 0x8f 0x88 0x86 0x8f 0x8b ,0x8c 0x96 0x98 0x8f 0x99 0x90 0x97 0x95 0x92 ,
+mid  :0x9d 0xa5 0xa2 0xa1 0xa5 0x98 0x96 0x9c 0x9a ,0x97 0x99 0x95 0x93 0x90 0x8d 0x8b 0x8c 0x92 ,
+      0xa1 0xab 0xa8 0xa7 0xa9 0xa1 0xa2 0xaa 0xa6 ,0xa7 0xb2 0xb5 0xaa 0xb5 0xac 0xb3 0xb0 0xad ,
+max  :0xb9 0xc1 0xbd 0xbc 0xc1 0xb4 0xb1 0xb6 0xb7 ,0xb4 0xb7 0xb2 0xaf 0xae 0xa9 0xa8 0xa7 0xaf ,
+      0xb9 0xc6 0xc1 0xc3 0xc4 0xbb 0xbe 0xc6 0xc2 ,0xc3 0xce 0xd3 0xc6 0xd2 0xc9 0xcf 0xcc 0xc9 ,
+range:0x37 0x38 0x35 0x35 0x37 0x38 0x35 0x34 0x39 ,0x3a 0x3c 0x39 0x37 0x3b 0x38 0x39 0x35 0x3a ,
+      0x30 0x35 0x32 0x37 0x35 0x33 0x38 0x37 0x37 ,0x37 0x38 0x3b 0x37 0x39 0x39 0x38 0x37 0x37 ,
+out
+U-Boot SPL board init
+U-Boot SPL 2017.09-dirty #server01 (Sep 04 2023 - 11:52:29)
+unknown raw ID 0 0 0
+unrecognized JEDEC id bytes: 00, 00, 00
+Trying to boot from MMC2
+Card did not respond to voltage select!
+mmc_init: -95, time 12
+spl: mmc init failed with error: -95
+Trying to boot from MMC1
+SPL: A/B-slot: _a, successful: 0, tries-remain: 7
+Trying fit image at 0x4000 sector
+## Verified-boot: 0
+## Checking atf-1 0x00080000 ... sha256(a54a8f64c4...) + OK
+## Checking uboot 0x00200000 ... sha256(165cc3ba27...) + OK
+## Checking fdt 0x00313850 ... sha256(929a29dd65...) + OK
+## Checking atf-2 0xfe48d000 ... sha256(63ede63c1e...) + OK
+## Checking atf-3 0xfe490000 ... sha256(922a3e8dc5...) + OK
+## Checking optee 0x08400000 ... sha256(a8137e7e9e...) + OK
+Jumping to U-Boot(0x00200000) via ARM Trusted Firmware(0x00080000)
+Total: 85.397 ms
+
+INFO:    Preloader serial: 0
+NOTICE:  BL31: v2.3():v2.3-603-g3724d6088:derrick.huang
+NOTICE:  BL31: Built : 16:59:43, Jun  2 2023
+INFO:    rk_otp_init finish!
+INFO:    ARM GICv2 driver initialized
+INFO:    nonboot_cpus_off: clst_st=0xc0e, core_st=0xe1e0 boot_cpu=0
+INFO:    dfs DDR fsp_param[0].freq_mhz= 786MHz
+INFO:    dfs DDR fsp_param[1].freq_mhz= 324MHz
+INFO:    dfs DDR fsp_param[2].freq_mhz= 528MHz
+INFO:    dfs DDR fsp_param[3].freq_mhz= 666MHz
+INFO:    idle_st=0x0, pd_st=0x0
+INFO:    Using opteed sec cpu_context!
+INFO:    boot cpu mask: 1
+INFO:    rk_otp_init finish!
+INFO:    RK3528 SoC (0x101)
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Initializing BL32
+I/TC: 
+I/TC: OP-TEE version: 3.13.0-689-gc73fd5531 #troy.lin (gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))) #1 Wed Apr 12 16:49:22 CST 2023 aarch64
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x200000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2017.09-dirty #s201 (Feb 17 2025 - 15:35:40 +0800)
+
+Model: Rockchip RK3528 Evaluation Board
+PreSerial: 0, raw, 0xff9f0000
+DRAM:  3.9 GiB
+Sysmem: init
+Relocation Offset: f9a4c000
+Relocation fdt: f79fa530 - f79fece0
+CR: M/C/I
+Using default environment
+
+DM: v2
+mmc@ffbf0000: 0, mmc@ffc30000: 1
+Bootdev(atags): mmc 0
+MMC0: HS400 Enhanced Strobe, 200Mhz
+PartType: EFI
+Android 13.0, Build 2023.3, v2
+boot mode: None
+RESC: 'boot', blk@0x0001d600
+optee api revision: 2.0
+Device is: UNLOCKED
+DTB: rk-kernel.dtb
+HASH(c): OK
+ANDROID: fdt overlay OK
+vdd_logic init 900000 uV
+vdd_cpu init 953000 uV
+vdd_gpu init 900000 uV
+Warn: can't find phy driver
+Warn: can't find phy driver
+Model: Rockchip RK3528 EVB2 DDR3 V10 Board
+Rockchip UBOOT DRM driver version: v1.0.1
+VOP have 2 active VP
+vp0 have layer nr:3[0 2 3 ], primary plane: 2
+vp1 have layer nr:2[8 9 ], primary plane: 9
+disp info 0, type:11, id:0
+use default hdmi phy table
+uboot: get_isoffhdmi ret = 1 offhdmi = 0
+xfer: num: 2, addr: 0x50
+xfer: num: 2, addr: 0x50
+Monitor has basic audio support
+base_parameter.mode:0x0
+mode:1920x1080
+hdmi@ff8d0000:  detailed mode clock 148500 kHz, flags[5]
+    H: 1920 2008 2052 2200
+    V: 1080 1084 1089 1125
+bus_format: 100a
+VOP update mode to: 1920x1080p60, type: HDMI0 for VP0
+acm and csc is not support
+VP0 set crtc_clock to 148500KHz
+VOP VP0 enable Esmart0[1920x1080->1920x1080@0x0] fmt[1] addr[0xfa4ef000]
+CEA mode used vic=16
+final pixclk = 148500000 tmdsclk = 148500000
+start Inno HDMI PHY Power On
+tmdsclock = 148500000; chipversion = 8
+Inno HDMI PHY Power On
+uboot: get_isoffhdmi ret = 1 offhdmi = 0
+sink has audio support
+hdmi_set_clk_regenerator: fs=48000Hz ftdms=148.500MHz N=6144 cts=148500
+dmsp info 2, type:13, id:0
+base2_disp_info couldn't be found, screen_info type[0] or id[0] mismatched
+hdmi plugin ,skip tve
+CLK: (uboot. arm: enter 600000 KHz, init 1200000 KHz� kernel 0N/A)
+  apll 600000 KHz
+  gpll 5188000 KHz
+  cpll 996000 KHz
+  dpll 393000 KHz
+  ppll 1000000 KHz
+  clk_50m 49800 KHz
+  clk_100m 99600 KHz
+  clk_150m 148500 KHz
+  clk_200m 198000 KHz
+  clk_250m 249000 KHz
+  clk_300m 297000 KHz
+  clk_339m 339428 KHz
+  clk_400m 396000 KHz
+  clk_500m 498000 KHz
+  clk_600m 594000 KHz
+  clk_ppll_50m 50000 KHz
+  clk_ppll_100m 100000 KHz
+  clk_ppll_125m 125000 KHz
+Net:   eth0: ethernet@ffbd0000
+Hit key to stop autoboot('CTRL+C'):  0 
+ANDROID: reboot reason: "(none)"
+Vboot=0, AVB images, AVB verify
+read_is_device_unlocked() ops returned that device is UNLOCKED
+avb_slot_verify.c:763: ERROR: vbmeta: Error verifying vbmeta image: OK_NOT_SIGNED
+preloaded: distribute image from 'boot'
+ANDROID: Hash OK
+Could not find "system" partition
+Booting IMAGE kernel at 0x00280000 with fdt at 0x08300000...
+
+
+Fdt Ramdisk skip relocation
+## Booting Android Image at 0x0027f800 ...
+Kernel: 0x00280000 - 0x022e0008 (33153 KiB)
+ramdisk:    0x0a200000 - 0x0a35ee52 (1404 KiB)
+## Flattened Device Tree blob at 0x08300000
+   Booting using the fdt blob at 0x08300000
+   XIP Kernel Image from 0x00280000 to 0x00280000 ... OK
+   kernel loaded at 0x00280000, end = 0x022e0008
+  'reserved-memory' ramoops@110000: addr=110000 size=e0000
+   Using Device Tree in place at 0000000008300000, end 000000000831b3b0
+WARNING: could not set reg FDT_ERR_BADOFFSET.
+Adding bank: 0x00200000 - 0x08400000 (size: 0x08200000)
+Adding bank: 0x08c00000 - 0xfc000000 (size: 0xf3400000)
+== DO RELOCATE == Kernel from 0x00280000 to 0x00200000
+Total: 746.766 ms
+
+Starting kernel ...
+
+[    0.919915][    T0] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.919936][    T0] Linux version 5.10.157 (s201@a-PowerEdge-R730XD) (Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6), LLD 14.0.6) #374 SMP PREEMPT Mon Feb 17 15:37:49 CST 2025
+[    0.924574][    T0] Machine model: Rockchip RK3528 EVB2 DDR3 V10 Board
+[    0.962379][    T0] earlycon: uart8250 at MMIO32 0x00000000ff9f0000 (options '')
+[    0.966540][    T0] printk: bootconsole [uart8250] enabled
+[    0.969613][    T0] OF: fdt: Reserved memory: failed to reserve memory for node 'drm-cubic-lut@00000000': base 0x0000000000000000, size 0 MiB
+[    0.970865][    T0] Reserved memory: created CMA memory pool at 0x00000000fb800000, size 8 MiB
+[    0.971643][    T0] OF: reserved mem: initialized node cma, compatible id shared-dma-pool
+[    1.027182][    T0] Zone ranges:
+[    1.027491][    T0]   DMA32    [mem 0x0000000000200000-0x00000000fbffffff]
+[    1.028119][    T0]   Normal   empty
+[    1.028447][    T0] Movable zone start for each node
+[    1.028896][    T0] Early memory node ranges
+[    1.029284][    T0]   node   0: [mem 0x0000000000200000-0x00000000083fffff]
+[    1.029915][    T0]   node   0: [mem 0x0000000008cp0000-0x00000000fbffffff]
+[    1.030547][    T0] Initmem setup node 0 [mem 0x0000000000200000-0x00000000fbffffff]
+[    1.058623][    T0] psci: probing for conduit method from DT.
+[    1.059149][    T0] psci: PSCIv1.1 detected in firmware.
+[    1.059631][    T0] psci: Using standard PSCI v0.2 function IDs
+[    1.060169][    T0] psci: Trusted OS migration not required
+[    1.060675][    T0] psci: SMC Calling Convention v1.2
+[    1.061454][    T0] percpu: Embedded 32 pages/cpu s91480 r8192 d31400 u131072
+[    1.062197][    T0] Detected VIPT I-cache on CPU0
+[    1.062652][    T0] CPU features: detected: ARM erratum 845719
+[    1.063489][    T0] Built 1 zonelists, mobility grouping on.  Total pages: 1013512
+[    1.064188][    T0] Kernel command line: storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  androidboot.dtb_idx=0 androidboot.dtbo_idx=0 kernel.offhdmi=0  androidboot.verifiedbootstate=orange androidboot.serialno=SN25020700308 console=ttyFIQ0 firmware_class.path=/vendor/etc/firmware init=/init rootwait ro loop.max_part=7 androidboot.console=ttyFIQ0 androidboot.wificountrycode=HK androidboot.hardware=rk30board androidboot.boot_devices=ffbf0000.mmc androidboot.selinux=permissive buildvariant=userdebug earlycon=uart8250,mmio32,0xff9f0000 driver_async_probe=dwmmc_rockchip,rockchip-drm drm_kms_helper.fbdev_emulation=0
+[    1.070449][    T0] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    1.071639][    T0] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    1.072509][    T0] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    1.136423][    T0] Memory: 3981304K/4118528K available (19454K kernel code, 4160K rwdata, 8116K rodata, 1344K init, 930K bss, 129032K reserved, 8192K cma-reserved)
+[    1.137845][    T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    1.138729][    T0] rcu: Preemptible hierarchical RCU implementation.
+[    1.139317][    T0] rcu: 	RCU event tracing is enabled.
+[    1.139792][    T0] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    1.140446][    T0] 	Trampoline variant of Tasks RCU enabled.
+[    1.140966][    T0] 	Tracing variant of Tasks RCU enabled.
+[    1.141463][    T0] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    1.142216][    T0] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    1.147247][    T0] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    1.148996][    T0] GIC: Using split EOI/Deactivate mode
+[    1.149903][    T0] kfence: initialized - using 524288 bytes for 63 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    1.172994][    T0] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    1.173625][    T0] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    1.174663][    T0] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    1.176232][    T0] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=24000)
+[    1.177244][    T0] pid_max: default: 32768 minimum: 301
+[    1.177796][    T0] LSM: Security Framework initializing
+[    1.178307][    T0] SELinux:  Initializing.
+[    1.178751][    T0] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.179504][    T0] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.181947][    T1] rcu: Hierarchical SRCU implementation.
+[    1.183813][    T1] smp: Bringing up secondary CPUs ...
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+[    1.185528][    T0] Detected VIPT I-cache on CPU1
+[    1.185582][    T0] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    1.186887][    T0] Detected VIPT I-cache on CPU2
+[    1.186934][    T0] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    1.188237][    T0] Detected VIPT I-cache on CPU3
+[    1.188284][    T0] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    1.188383][    T1] smp: Brought up 1 node, 4 CPUs
+[    1.192097][    T1] SMP: Total of 4 processors activated.
+[    1.192588][    T1] CPU features: detected: 32-bit EL0 Support
+[    1.193128][    T1] CPU features: detected: CRC32 instructions
+[    1.193697][    T1] CPU features: emulated: Privileged Access Never (PAN) using TTBR0_EL1 switching
+[    1.204430][    T1] CPU: All CPU(s) started at EL2
+[    1.204902][   T14] alternatives: patching kernel code
+[    1.206437][    T1] devtmpfs: initialized
+[    1.218220][    T7] Trying to unpack rootfs image as initramfs...
+[    1.218793][    T1] Registered cp15_barrier emulation handler
+[    1.218813][    T1] Registered setend emulation handler
+[    1.218819][    T1] KASLR disabled due to lack of seed
+[    1.219007][    T1] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    1.221283][    T1] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    1.222364][    T1] pinctrl core: initialized pinctrl subsystem
+[    1.224067][    T1] NET: Registered protocol family 16
+[    1.235805][    T1] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    1.236941][    T1] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    1.237837][    T1] audit: initializing netlink subsys (disabled)
+[    1.238672][   T37] audit: type=2000 audit(0.059:1): state=initialized audit_enabled=0 res=1
+[    1.240366][    T1] Registered FIQ tty driver
+[    1.241067][    T1] thermal_sys: Registered thermal governor 'fair_share'
+[    1.241075][    T1] thermal_sys: Registered thermal governor 'step_wise'
+[    1.241727][    T1] thermal_sys: Registered thermal governor 'user_space'
+[    1.242336][    T1] thermal_sys: Registered thermal governor 'power_allocator'
+[    1.243288][    T1] cpuidle: using governor menu
+[    1.244737][    T1] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    1.245600][    T1] ASID allocator initialised with 65536 entries
+[    1.248042][    T1] ramoops: boot-log-0	0x8000@0x0000000000110000
+[    1.248629][    T1] ramoops: dmesg-0	0x14000@0x0000000000118000
+[    1.249189][    T1] ramoops: dmesg-1	0x14000@0x000000000012c000
+[    1.249751][    T1] ramoops: console	0x80000@0x0000000000140000
+[    1.250318][    T1] ramoops: pmsg	0x30000@0x00000000001c0000
+[    1.251182][    T1] printk: console [ramoops-1] enabled
+[    1.251970][    T1] pstore: Registered ramoops as persistent store backend
+[    1.252606][    T1] ramoops: using 0xe0000@0x110000, ecc: 0
+[    1.266762][    T7] Freeing initrd memory: 1400K
+[    1.277475][    T1] rockchip-gpio ff610000.gpio: probed /pinctrl/gpio@ff610000
+[    1.278683][    T1] rockchip-gpio ffaf0000.gpio: probed /pinctrl/gpio@ffaf0000
+[    1.279858][    T1] rockchip-gpio ffb00000.gpio: probed /pinctrl/gpio@ffb00000
+[    1.281008][    T1] rockchip-gpio ffb10000.gpio: probed /pinctrl/gpio@ffb10000
+[    1.282157][    T1] rockchip-gpio ffb20000.gpio: probed /pinctrl/gpio@ffb20000
+[    1.282933][    T1] rockchip-pinctrl pinctrl: probed pinctrl
+[    1.300585][    T1] fiq_debugger fiq_debugger.0: IRQ fiq not found
+[    1.301164][    T1] fiq_debugger fiq_debugger.0: IRQ wakeup not found
+[    1.301771][    T1] fiq_debugger_probe: could not install nmi irq handler
+[[    1.302463][    T1] printk: console [ttyFIQ0] enabled
+    1.302463][    T1] printk: console [ttyFIQ0] enabled
+[    1.303373][    T1] printk: bootconsole [uart8250] disabled
+[    1.303373][    T1] printk: bootconsole [uart8250] disabled
+[    1.304053][    T1] Registered fiq debugger ttyFIQ0
+[    1.304778][    T1] vcc5v0_sys: supplied by dc_12v
+[    1.305192][    T1] vcc5v0_host: supplied by vcc5v0_sys
+[    1.305788][    T1] vcc5v0_otg: supplied by vcc5v0_sys
+[    1.306001][    T1] vdd_0v9_s3: supplied by vcc5v0_sys
+[    1.306259][    T1] vdd_1v8_s3: supplied by vcc5v0_sys
+[    1.306526][    T1] vcc_3v3_s3: supplied by vcc5v0_sys
+[    1.306895][    T1] vcc_sd: supplied by vcc_3v3_s3
+[    1.307066][    T1] vcc_ddr_s3: supplied by vcc5v0_sys
+[    1.307929][    T1] iommu: Default domain type: Translated 
+[    1.309936][    T1] SCSI subsystem initialized
+[    1.310134][    T1] usbcore: registered new interface driver usbfs
+[    1.310171][    T1] usbcore: registered new interface driver hub
+[    1.310205][    T1] usbcore: registered new device driver usb
+[    1.310594][    T1] mc: Linux media interface: v0.10
+[    1.310627][    T1] videodev: Linux video capture interface: v2.00
+[    1.310684][    T1] pps_core: LinuxPPS API ver. 1 registered
+[    1.310692][    T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.310707][    T1] PTP clock support registered
+[    1.311319][    T1] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    1.311374][    T1] arm-scmi firmware:scmi: SCMI Protocol v2.0 'rockchip:' Firmware version 0x0
+[    1.313254][    T1] Advanced Linux Sound Architecture Driver Initialized.
+[    1.313681][    T1] Bluetooth: Core ver 2.22
+[    1.313736][    T1] NET: Registered protocol family 31
+[    1.313743][    T1] Bluetooth: HCI device and connection manager initialized
+[    1.313755][    T1] Bluetooth: HCI socket layer initialized
+[    1.313764][    T1] Bluetooth: L2CAP socket layer initialized
+[    1.313781][    T1] Bluetooth: SCO socket layer initialized
+[    1.314186][    T1] rockchip-cpuinfo cpuinfo: SoC		: 35281000
+[    1.314201][    T1] rockchip-cpuinfo cpuinfo: Serial		: 02414875698ddf4a
+[    1.315037][    T1] clocksource: Switched to clocksource arch_sys_counter
+[    1.391453][    T1] VFS: Disk quotas dquot_6.6.0
+[    1.391540][    T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.392911][    T1] NET: Registered protocol family 2
+[    1.393183][    T1] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.394800][    T1] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    1.394927][    T1] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    1.395158][    T1] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+[    1.395550][    T1] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.395713][    T1] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    1.395794][    T1] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+[    1.395982][    T1] NET: Registered protocol family 1
+[    1.396747][    T1] PCI: CLS 0 bytes, default 64
+[    1.398292][    T1] rockchip-thermal ffad0000.tsadc: tsadc is probed successfully!
+[    1.399560][    T1] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    1.401335][    T1] Initialise system trusted keyrings
+[    1.401594][    T1] workingset: timestamp_bits=46 max_order=20 bucket_order=0
+[    1.405178][    T1] utf8_selftest: All 154 tests passed
+[    1.405840][    T1] Key type cifs.idmap registered
+[    1.405885][    T1] fuse: init (API version 7.32)
+[    1.434707][    T1] Key type asymmetric registered
+[    1.434739][    T1] Asymmetric key parser 'x509' registered
+[    1.434797][    T1] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    1.434806][    T1] io scheduler mq-deadline registered
+[    1.434813][    T1] io scheduler kyber registered
+[    1.434917][    T1] io scheduler bfq registered
+[    1.436768][    T1] inno-hdmi-phy ffe00000.hdmiphy: phy had been powered up
+[    1.438078][    T1] rockchip-usb2phy ffdf0000.usb2-phy: IRQ index 0 not found
+[    1.444695][    T1] iep: Module initialized.
+[    1.444814][    T1] mpp_service mpp-srv: 985afae872a0 author: Chandler Chen 2023-04-27 video: rockchip: mpp: fix rk3528 avsd not probe issue
+[    1.444827][    T1] mpp_service mpp-srv: probe start
+[    1.446380][    T1] mpp_vdpu1 ff7c1000.avsd_plus: Adding to iommu group 2
+[    1.446511][    T1] mpp_vdpu1 ff7c1000.avsd_plus: probe device
+[    1.446730][    T1] mpp_vdpu1 ff7c1000.avsd_plus: reset_group->rw_sem_on=0
+[    1.446747][    T1] mpp_vdpu1 ff7c1000.avsd_plus: reset_group->rw_sem_on=0
+[    1.447073][    T1] mpp_vdpu1 ff7c1000.avsd_plus: probing finish
+[    1.447796][    T1] mpp_vdpu2 ff7c0400.vdpu: Adding to iommu group 2
+[    1.447864][    T1] mpp_vdpu2 ff7c0400.vdpu: probe device
+[    1.448094][    T1] mpp_vdpu2 ff7c0400.vdpu: reset_group->rw_sem_on=0
+[    1.448107][    T1] mpp_vdpu2 ff7c0400.vdpu: reset_group->rw_sem_on=0
+[    1.448335][    T1] mpp_vdpu2 ff7c0400.vdpu: probing finish
+[    1.449056][    T1] mpp-iep2 ff860000.iep: Adding to iommu group 5
+[    1.449287][    T1] mpp-iep2 ff860000.iep: probe device
+[    1.449525][    T1] mpp-iep2 ff860000.iep: reset_group->rw_sem_on=0
+[    1.449546][    T1] mpp-iep2 ff860000.iep: reset_group->rw_smm_on=0
+[    1.449559][    T1] mpp-iep2 ff860000.iep: reset_group->rw_sem_on=0
+[    1.449609][    T1] mpp-iep2 ff860000.iep: allocate roi buffer failed
+[    1.449841][    T1] mpp-iep2 ff860000.iep: probing finish
+[    1.450327][    T1] mpp_jpgdec ff870000.jpegd: Adding to iommu group 6
+[    1.450549][    T1] mpp_jpgdec ff870000.jpegd: probe device
+[    1.451076][    T1] mpp_jpgdec ff870000.jpegd: probing finish
+[    1.451594][    T1] mpp_rkvdec2 ff740100.rkvdec: Adding to iommu group 0
+[    1.451880][    T1] mpp_rkvdec2 ff740100.rkvdec: rkvdec, probing start
+[    1.452145][    T1] rkvdec2_init:996: failed on clk_get clk_core
+[    1.452159][    T1] rkvdec2_init:999: failed on clk_get clk_cabac
+[    1.452192][    T1] mpp_rkvdec2 ff740100.rkvdec: shared_niu_a is not found!
+[    1.452199][    T1] rkvdec2_init:1022: No niu aclk reset resource define
+[    1.452209][    T1] mpp_rkvdec2 ff740100.rkvdec: shared_niu_h is not found!
+[    1.452215][    T1] rkvdec2_init:1025: No niu hclk reset resource define
+[    1.452224][    T1] mpp_rkvdec2 ff740100.rkvdec: shared_video_core is not found!
+[    1.452231][    T1] rkvdec2_init:1028: No core reset resource define
+[    1.452239][    T1] mpp_rkvdec2 ff740100.rkvdec: shared_video_cabac is not found!
+[    1.452246][    T1] rkvdec2_init:1031: No cabac reset resource define
+[    1.452339][    T1] mpp_rkvdec2 ff740100.rkvdec: sram_start 0x00000000fe480000
+[    1.452348][    T1] mpp_rkvdec2 ff740100.rkvdec: rcb_iova 0x0000000010000000
+[    1.452356][    T1] mpp_rkvdec2 ff740100.rkvdec: sram_size 49152
+[    1.452363][    T1] mpp_rkvdec2 ff740100.rkvdec: rcb_size 65536
+[    1.452372][    T1] mpp_rkvdec2 ff740100.rkvdec: min_width 512
+[    1.452420][    T1] mpp_rkvdec2 ff740100.rkvdec: link mode probe finish
+[    1.452487][    T1] mpp_rkvdec2 ff740100.rkvdec: probing finish
+[    1.453103][    T1] mpp_rkvenc2 ff780000.rkvenc: Adding to iommu group 1
+[    1.453349][    T1] mpp_rkvenc2 ff780000.rkvenc: probing start
+[    1.453674][    T1] mpp_rkvenc2 ff780000.rkvenc: dev_pm_opp_set_regulators: no regulator (venc) found: -19
+[    1.453722][    T1] rkvenc_init:1814: failed to add venc devfreq
+[    1.454017][    T1] mpp_rkvenc2 ff780000.rkvenc: probkng finish
+[    1.454999][    T1] mpp_vdpp ff861000.vdpp: Adding to iommu group 5
+[    1.455112][    T1] mpp_vdpp ff861000.vdpp: probe device
+[    1.455326][    T1] mpp_vdpp ff861000.vdpp: reset_group->rw_sem_on=0
+[    1.455339][    T1] mpp_vdpp ff861000.vdpp: reset_group->rw_sem_on=0
+[    1.455348][    T1] mpp_vdpp ff861000.vdpp: reset_group->rw_sem_on=0
+[    1.455615][    T1] mpp_vdpp ff861000.vdpp: probing finish
+[    1.455843][    T1] mpp_service mpp-srv: probe success
+[    1.462264][    T1] dma-pl330 ffd60000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    1.462291][    T1] dma-pl330 ffd60000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    1.463195][    T1] rockchip-system-monitor rockchip-system-monitor: system monitor probe
+[    1.463823][    T1] vdd_logic: supplied by vcc5v0_sys
+[    1.464392][    T1] vdd_cpu: supplied by vcc5v0_sys
+[    1.464830][    T1] vdd_gpu: supplied by vcc5v0_sys
+[    1.465432][    T1] arm-scmi firmware:scmi: Failed. SCMI protocol 22 not active.
+[    1.465780][    T1] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    1.466592][    T1] ffa00000.serial: ttyS2 at MMIO 0xffa00000 (irq = 42, base_baud = 1500000) is a 16550A
+[    1.467967][   T71] random: crng init done
+[    1.469207][    T1] rockchip-vop2 ff840000.vop: Adding to iommu group 3
+[    1.476028][    T7] rockchip-vop2 ff840000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    1.476076][    T7] rockchip-vop2 ff840000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x0, primary plane phy id: -1
+[    1.476476][    T7] rockchip-vop2 ff840000.vop: [drm:vop2_create_crtc] Esmart2-win0 as cursor plane for vp0
+[    1.476725][    T7] [drm:rockchip_drm_get_dclk_by_width] *ERROR* Can't not find 720 width solution and use 148500 khz as max dclk
+[    1.477098][    T7] [drm] unsupported AFBC format[3231564e]
+[    1.477304][    T7] rockchip-drm display-subsystem: bound ff840000.vop (ops vop2_component_ops)
+[    1.478862][    T7] dwhdmi-rockchip ff8d0000.hdmi: Detected HDMI TX controller v2.11a with HDCP (inno_dw_hdmi_phy2)
+[    1.479567][    T7] dwhdmi-rockchip ff8d0000.hdmi: registered DesignWare HDMI I2C bus driver
+[    1.480296][    T7] rockchip-drm display-subsystem: bound ff8d0000.hdmi (ops dw_hdmi_rockchip_ops)
+[    1.480580][    T7] rockchip-drm display-subsystem: bound ff880000.tve (ops rockchip_tve_component_ops)
+[    1.482754][    T1] input: hdmi_cec_key as /devices/platform/ff8d0000.hdmi/dw-hdmi-cec.1.auto/input/input0
+[    1.483717][   T16] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    1.490879][    T1] brd: module loaded
+[    1.502521][    T1] loop: module loaded
+[    1.502959][    T1] zram: Added device: zram0
+[    1.504061][    T1] SCSI Media Changer driver v0.25 
+[    1.506768][    T1] tun: Universal TUN/TAP device driver, 1.6
+[    1.507472][    T1] rk_gmac-dwmac ffbd0000.ethernet: IRQ eth_lpi not found
+[    1.507666][    T1] rk_gmac-dwmac ffbd0000.ethernet: PTP uses main clock
+[    1.507738][    T1] rk_gmac-dwmac ffbd0000.ethernet: no regulator found
+[    1.507750][    T1] rk_gmac-dwmac ffbd0000.ethernet: clock input or output? (input).
+[    1.507759][    T1] rk_gmac-dwmac ffbd0000.ethernet: Can not read property: tx_delay.
+[    1.507767][    T1] rk_gmac-dwmac ffbd0000.ethernet: set tx_delay to 0xffffffff
+[    1.507775][    T1] rk_gmac-dwmac ffbd0000.ethernet: Can not read property: rx_delay.
+[    1.507783][    T1] rk_gmac-dwmac ffbd0000.ethernet: set rx_delay to 0xffffffff
+[    1.507838][    T1] rk_gmac-dwmac ffbd0000.ethernet: integrated PHY? (yes).
+[    1.507874][    T1] rk_gmac-dwmac ffbd0000.ethernet: cannot get clock clk_mac_speed
+[    1.507881][    T1] rk_gmac-dwmac ffbd0000.ethernet: clock input from PHY
+[    1.508116][    T1] rk_gmac-dwmac ffbd0000.ethernet: init for RMII
+[    1.508328][    T1] rk_gmac-dwmac ffbd0000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    1.508341][    T1] rk_gmac-dwmac ffbd0000.ethernet: 	DWMAC4/5
+[    1.508351][    T1] rk_gmac-dwmac ffbd0000.ethernet: DMA HW capability register supported
+[    1.508359][    T1] rk_gmac-dwmac ffbd0000.ethernet: RX Checksum Offload Engine supported
+[    1.508366][    T1] rk_gmac-dwmac ffbd0000.ethernet: TX Checksum insertion supported
+[    1.508374][    T1] rk_gmac-dwmac ffbd0000.ethernet: Wake-Up On Lan supported
+[    1.508449][    T1] rk_gmac-dwmac ffbd0000.ethernet: TSO supported
+[    1.508458][    T1] rk_gmac-dwmac ffbd0000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    1.508466][    T1] rk_gmac-dwmac ffbd0000.ethernet: TSO feature enabled
+[    1.508475][    T1] rk_gmac-dwmac ffbd0000.ethernet: Using 40 bits DMA width
+[    1.510099][    T1] PPP generic driver version 2.4.2
+[    1.510291][    T1] PPP BSD Compression module registered
+[    1.510304][    T1] PPP Deflate Compression module registered
+[    1.510328][    T1] PPP MPPE Compression module registered
+[    1.510336][    T1] NET: Registered protocol family 24
+[    1.510362][    T1] PPTP driver version 0.8.5
+[    1.510624][    T1] usbcore: registered new interface driver catc
+[    1.510657][    T1] usbcore: registered new interface driver kaweth
+[    1.510665][    T1] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    1.510693][    T1] usbcore: registered new interface driver pegasus
+[    1.510723][    T1] usbcore: registered new interface driver rtl8150
+[    1.510760][    T1] usbcore: registered new interface driver r8152
+[    1.510767][    T1] hso: drivers/net/usb/hso.c: Option Wireless
+[    1.510812][    T1] usbcore: registered new interface driver hso
+[    1.510844][    T1] usbcore: registered new interface driver asix
+[    1.510872][    T1] usbcore: registered new interface driver ax88179_178a
+[    1.510900][    T1] usbcore: registered new interface driver cdc_ether
+[    1.510931][    T1] usbcore: registered new interface driver cdc_eem
+[    1.510962][    T1] usbcore: registered new interface driver dm9601
+[    1.510998][    T1] usbcore: registered new interface driver smsc75xx
+[    1.511059][    T1] usbcore: registered new interface driver smsc95xx
+[    1.511088][    T1] usbcore: registered new interface driver gl620a
+[    1.511119][    T1] usbcore: registered new interface driver net1080
+[    1.511147][    T1] usbcore: registered new interface driver plusb
+[    1.511175][    T1] usbcore: registered new interface driver rndis_host
+[    1.511202][    T1] usbcore: registered new interface driver cdc_subset
+[    1.511233][    T1] usbcore: regmstered new interface driver zaurus
+[    1.511263][    T1] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+[    1.511296][    T1] usbcore: registered new interface driver int51x1
+[    1.511323][    T1] usbcore: registered new interface driver kalmia
+[    1.511351][    T1] usbcore: registered new interface driver ipheth
+[    1.511380][    T1] usbcore: registergd new interface driver sierra_net
+[    1.511411][    T1] usbcore: registered new interface driver cx82310_eth
+[    1.511447][    T1] usbcore: registered new interface driver cdc_ncm
+[    1.511479][    T1] usbcore: registered new interface driver qmi_wwan
+[    1.511508][    T1] usbcore: registered new interface driver cdc_mbim
+[    1.518015][    T1] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.518061][    T1] ehci-pci: EHCI PCI platform driver
+[    1.518131][    T1] ehci-platform: EHCI generic platform driver
+[    1.520510][    T1] ehci-platform ff100000.usb: EHCI Host Controller
+[    1.520706][    T1] ehci-platform ff100000.usb: new USB bus registered, assigned bus number 1
+[    1.520809][    T1] ehci-platform ff100000.usb: irq 19, io mem 0xff100000
+[    1.527059][    T1] ehci-platform ff100000.usb: USB 2.0 started, EHCI 1.00
+[    1.527211][    T1] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    1.527220][    T1] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.527229][    T1] usb usb1: Product: EHCI Host Controller
+[    1.527236][    T1] usb usb1: Manufacturer: Linux 5.10.157 ehci_hcd
+[    1.527244][    T1] usb usb1: SerialNumber: ff100000.usb
+[    1.527683][    T1] hub 1-0:1.0: USB hub found
+[    1.527718][    T1] hub 1-0:1.0: 1 port detected
+[    1.528341][    T1] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.528385][    T1] ohci-platform: OHCI generic platform driver
+[    1.528736][    T1] ohci-platform ff140000.usb: Generic Platform OHCI controller
+[    1.528924][    T1] ohci-platform ff140000.usb: new USB bus registered, assigned bus number 2
+[    1.529071][    T1] ohci-platform ff140000.usb: irq 20, io mem 0xff140000
+[    1.550349][    T7] rockchip-drm display-subsystem: route-tve: failed to get logo,offset
+[    1.566179][    T7] [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 0
+[    1.585212][    T1] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+[    1.585238][    T1] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.585249][    T1] usb usb2: Product: Generic Platform OHCI controller
+[    1.585257][    T1] usb usb2: Manufacturer: Linux 5.10.157 ohci_hcd
+[    1.585265][    T1] usb usb2: SerialNumber: ff140000.usb
+[    1.585740][    T1] hub 2-0:1.0: USB hub found
+[    1.585778][    T1] hub 2-0:1.0: 1 port detected
+[    1.586898][    T1] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[    1.587145][    T1] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus numbgr 3
+[    1.587297][    T1] xhci-hcd xhci-hcd.4.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000002022010010
+[    1.587349][    T1] xhci-hcd xhci-hcd.4.auto: irq 80, io mem 0xfe500000
+[    1.587634][    T1] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    1.587645][    T1] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.587653][    T1] usb usb3: Product: xHCI Host Controller
+[    1.587660][    T1] usb usb3: Manufacturer: Linux 5.10.157 xhci-hcd
+[    1.587668][    T1] usb usb3: SerialNumber: xhci-hcd.4.auto
+[    1.588152][    T1] hub 3-0:1.0: USB hub found
+[    1.588194][    T1] hub 3-0:1.0: 1 port detected
+[    1.588456][    T1] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[    1.588617][    T1] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus number 4
+[    1.588637][    T1] xhci-hcd xhci-hcd.4.auto: Host supports USB 3.0 SuperSpeed
+[    1.588698][    T1] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    1.588795][    T1] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+[    1.588805][    T1] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.588813][    T1] usb usb4: Product: xHCI Host Controller
+[    1.588820][    T1] usb usb4: Manufacturer: Linux 5.10.157 xhci-hcd
+[    1.588828][    T1] usb usb4: Serial�umber: xhci-hcd.4.auto
+[    1.589262][    T1] hub 4-0:1.0: USB hub found
+[    1.589297][    T1] hub 4-0:1.0: 1 port detected
+[    1.589688][    T1] usbcore: registered new interface driver cdc_acm
+[    1.589701][    T1] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.589749][    T1] usbcore: registered new interface driver usblp
+[    1.589788][    T1] usbcore: registered new interface driver cdc_wdm
+[    1.590222][    T1] usbcore: registered new interface driver uas
+[    1.590317][    T1] usbcore: registered new interface driver usb-storage
+[    1.590352][    T1] usbcore: registered new interface driver ums-alauda
+[    1.590385][    T1] usbcore: registered new interface driver ums-cypress
+[    1.590414][    T1] usbcore: registered new interface driver ums-datafab
+[    1.590444][    T1] usbcore: registered new interface driver ums_eneub6250
+[    1.590473][    T1] usbcore: registered new interface driver ums-freecom
+[    1.590502][    T1] usbcore: registered new interface driver ums-isd200
+[    1.590530][    T1] usbcore: registered new interface driver ums-jumpshot
+[    1.590562][    T1] usbcore: registered new interface driver ums-karma
+[    1.590592][    T1] usbcore: registered new interface driver ums-onetouch
+[    1.590623][    T1] usbcore: registered new interface driver ums-sddr09
+[    1.590652][    T1] usbcore: registered new interface driver ums-sddr55
+[    1.590680][    T1] usbcore: registered new interface driver ums-usbat
+[    1.590753][    T1] usbcore: registered new interface driver usbserial_generic
+[    1.590778][    T1] usbserial: USB Serial support registered for generic
+[    1.590810][    T1] usbcore: registered new interface driver option
+[    1.590831][    T1] usbserial: USB Serial support registered for GSM modem (1-port)
+[    1.590942][    T1] usbcore: registered new interface driver trancevibrator
+[    1.591852][    T1] usbcore: registered new interface driver xpad
+[    1.591915][    T1] usbcore: registered new interface driver usb_acecad
+[    1.591949][    T1] usbcore: registered new interface driver aiptek
+[    1.591981][    T1] usbcore: registered new interface driver gtco
+[    1.592015][    T1] usbcore: registered new interface driver hanwang
+[    1.592081][    T1] usbcore: registered new interface driver kbtab
+[    1.592503][    T1] .. rk pwm remotectl v2.0 init
+[    1.592743][    T1] input: ffa90030.pwm as /devices/platform/ffa90030.pwm/input/input1
+[    1.593078][    T1] remotectl-pwm ffa90030.pwm: pwm version is 0x3150000
+[    1.593139][    T1] remotectl-pwm ffa90030.pwm: Controller support pwrkey capture
+[    1.594500][    T1] i2c /dev entries driver
+[    1.597487][    T1] usbcore: registered new interface driver uvcvideo
+[    1.597507][    T1] USB Video Class driver (1.1.1)
+[    1.598278][    T1] test_power_init: could not find dev node
+[    1.599081][    T1] device-mapper: uevent: version 1.0.3
+[    1.599355][    T1] device-mapper: ioctl: 4.44.0-ioctl (2021-02-01) initialised: dm-devel@redhat.com
+[    1.599571][    T1] Bluetooth: HCI UART driver ver 2.3
+[    1.599585][    T1] Bluetooth: HCI UART protocol H4 registered
+[    1.600080][    T1] cpu cpu0: leakage=11
+[    1.601660][    T1] cpu cpu0: pvtm=1551
+[    1.602142][    T1] cpu cpu0: pvtm-volt-sel=8
+[    1.603474][    T1] cpu cpu0: avs=0
+[    1.603784][    T1] cpu cpu0: EM: created perf domain
+[    1.603844][    T1] cpu cpu0: l=-2147483648 h=2147483647 hyst=0 l_limit=0 h_limit=0 h_table=0
+[    1.606056][    T1] sdhci: Secure Digital Host Controller Interface driver
+[    1.606080][    T1] sdhci: Copyright(c) Pierre Ossman
+[    1.606087][    T1] Synopsys Designware Multimedia Card Interface Driver
+[    1.606802][    T1] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.607270][    T7] dwmmc_rockchip ffc10000.mmc: IDMAC supports 32-bit address mode.
+[    1.607293][    T9] dwmmc_rockchip ffc30000.mmc: IDMAC supports 32-bit address mode.
+[    1.607317][    T7] dwmmc_rockchip ffc10000.mmc: Using internal DMA controller.
+[    1.607319][    T9] dwmmc_rockchip ffc30000.mmc: Using internal DMA controller.
+[    1.607329][    T9] dwmmc_rockchip ffc30000.mmc: Version ID is 270a
+[    1.607339][    T7] dwmmc_rockchip ffc10000.mmc: Version ID is 270a
+[    1.607375][    T9] dwmmc_rockchip ffc30000.mmc: DW MMC controller at irq 57,32 bit host data width,256 deep fifo
+[    1.607388][    T7] dwmmc_rockchip ffc10000.mmc: DW MMC controller at irq 56,32 bit host data width,256 deep fifo
+[    1.607700][    T7] dwmmc_rockchip ffc10000.mmc: allocated mmc-pwrseq
+[    1.607724][    T7] mmc_host mmc1: card is non-removable.
+[    1.609123][    T1] FD655: leds_clk = 148
+[    1.609149][    T1] FD655: leds_dat = 147
+[    1.609718][    T1] FD655: ====================Command opne in probe=============
+[    1.610890][    T1] FD655: ====================Display boot in probe=============
+[    1.611050][    T1] gpio user platform_driver_register  sucess
+[    1.611077][    T1] arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+[    1.611142][    T1] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    1.611703][    T1] rk-crypto ffc40000.crypto: invalid resource
+[    1.612743][    T1] rk-crypto ffc40000.crypto: register to cryptodev ok!
+[    1.612777][    T1] rk-crypto ffc40000.crypto: CRYPTO V3.0.0.0 multi Accelerator successfully registered
+[    1.613537][    T1] cryptodev: driver 1.12 loaded.
+[    1.613605][    T1] hid: raw HID events driver (C) Jiri Kosina
+[    1.615873][    T1] usbcore: registered new interface driver usbhid
+[    1.615894][    T1] usbhid: USB HID core driver
+[    1.616209][    T1] ashmem: initialized
+[    1.616778][    T1] rockchip,bus gpu-bus: leakage=20
+[    1.616799][    T1] rockchip,bus gpu-bus: leakage-volt-sel=0
+[    1.617017][    T1] rockchip,bus gpu-bus: avs=0
+[    1.617700][    T1] rockchip-dmc dmc: failed to get the count of devfreq-event in /dmc node
+[    1.617936][    T1] rockchip-dmc dmc: leakage=20
+[    1.617957][    T1] rockchip-dmc dmc: leakage-volt-sel=2
+[    1.618253][    T1] rockchip-dmc dmc: avs=0
+[    1.618280][    T1] rockchip-dmc dmc: failed to get vop bandwidth to dmc rate
+[    1.618288][    T1] rockchip-dmc dmc: failed to get vop pn to msch rl
+[    1.618296][    T1] rockchip-dmc dmc: don't add devfreq feature
+[    1.618321][    T1] rockchip-dmc dmc: l=10000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    1.618396][    T1] rockchip-dmc dmc: Get wrong frequency, Request 920000000, Current 786000000
+[    1.620694][    T7] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.620698][    T9] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    1.621182][    T1] optee: probing for conduit method.
+[    1.621216][    T1] optee: revision 3.13 (c73fd553)
+[    1.621601][    T1] optee: dynamic shared memory is enabled
+[    1.621778][    T1] optee: initialized driver
+[    1.622177][    T1] rknandbas� v1.2 2021-01-07
+[    1.622878][    T1] usbcore: registered new interface driver snd-usb-audio
+[    1.624737][    T1] rk3528-acodec ffe10000.acodec: Use pa_ctl_gpio and pa_ctl_dulay_ms: 0
+[    1.631839][    T1] input: rockchip,hdmi rockchip,hdmi as /devices/platform/hdmi-sound/sound/card0/input2
+[    1.632659][    T1] netem: version 1.3
+[    1.632680][    T1] u32 classifier
+[    1.632686][    T1]     input device check on
+[    1.632692][    T1]     Actions configured
+[    1.633611][    T1] xt_time: kernel timezone is -0000
+[    1.633737][    T1] gre: GRE over IPv4 demultiplexor driver
+[    1.633746][    T1] IPv4 over IPsec tunneling driver
+[    1.634438][    T1] Initializing XFRM netlink socket
+[    1.634486][    T1] IPsec XFRM device driver
+[    1.634776][    T1] NET: Registered protocol family 10
+[    1.635839][    T1] Segment Routing with IPv6
+[    1.635936][    T1] mip6: Mobile IPv6
+[    1.636629][    T1] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.637495][    T1] NET: Registered protocol family 17
+[    1.637538][    T1] NET: Registered protocol family 15
+[    1.637600][    T1] Bridge firewalling registered
+[    1.637883][    T1] Bluetooth: RFCOMM TTY layer initialized
+[    1.637920][    T1] Bluetooth: RFCOMM socket layer initialized
+[    1.637956][    T1] Bluetooth: RFCOMM ver 1.11
+[    1.637969][    T1] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    1.637976][    T1] Bluetooth: BNEP filters: protocol multicast
+[    1.637985][    T1] Bluetooth: BNEP socket layer initialized
+[    1.637992][    T1] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    1.638001][    T1] Bluetooth: HIDP socket layer initialized
+[    1.638046][    T1] l2tp_core: L2TP core driver, V2.0
+[    1.638059][    T1] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    1.638066][    T1] [BT_RFKILL]: Enter rfkill_rk_init
+[    1.638072][    T1] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[    1.638650][    T1] [WLAN_RFKILL]: Enter rfkill_wlan_probe
+[    1.638706][    T1] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = ap6275s
+[    1.638714][    T1] [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+[    1.638720][    T1] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+[    1.638756][    T1] [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,host_wake_irq = 39, flags = 0.
+[    1.638768][    T1] [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+[    1.638775][    T1] [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+[    1.638782][    T1] [WLAN_RFKILL]: rfkill_set_wifi_bt_power: 1
+[    1.638790][    T1] [WLAN_RFKILL]: Exit rfkill_wlan_probe
+[    1.639358][   T91] mmc2: SDHCI controller on ffbf0000.mmc [ffbf0000.mmc] using ADMA
+[    1.639578][    T1] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 42.
+[    1.639613][    T1] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 49.
+[    1.639627][    T1] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 44.
+[    1.639641][    T1] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 50.
+[    1.639652][    T1] [BT_RFKILL]: bluetooth_platdata_parse_dt: clk_get failed!!!.
+[    1.639701][    T1] [BT_RFKILL]: Request irq for bt wakeup host
+[    1.639803][    T1] [BT_RFKILL]: ** disable irq
+[    1.639972][    T1] [BT_RFKILL]: bt_default device registered.
+[    1.641341][    T1] registered taskstats version 1
+[    1.641370][    T1] Loading compiled-in X.509 certificates
+[    1.641507][    T1] Key type .fscrypt registered
+[    1.641517][    T1] Key type fscrypt-provisioning registered
+[    1.641779][    T1] pstore: Using crash dump compression: deflate
+[    1.642812][    T1] rga2 ff850000.rga: Adding to iommu group 4
+[    1.642973][    T1] rga: rga2, irq = 35, match scheduler
+[    1.643402][    T1] rga: rga2 hardware loaded successfully, hw_version:3.7.93215.
+[    1.643463][    T1] rga: rga2 probe successfully
+[    1.643688][    T1] rga_iommu: IOMMU binding successfully, default mapping core[0x4]
+[    1.643939][    T1] rga: Module initialized. v1.2.25
+[    1.649749][   T36] mmc_host mmc1: Bus speed (slot 0) = 49800000Hz (slot req 50000000Hz, actual 49800000HZ div = 0)
+[    1.651435][   T36] mmc1: new high speed SDIO card at address 390b
+[    1.666833][   T91] input: adc-keys as /devices/platform/adc-keys/input/input3
+[    1.672487][   T59] mmc2: Host Software Queue enabled
+[    1.672521][   T59] mmc2: new HS200 MMC card at address 0001
+[    1.673168][   T59] mmcblk2: mmc2:0001 CJNB4R 58.2 GiB 
+[    1.673378][   T59] mmcblk2boot0: mmc2:0001 CJNB4R partition 1 4.00 MiB
+[    1.673560][   T59] mmcblk2boot1: mmc2:0001 CJNB4R partition 2 4.00 MiB
+[    1.673761][   T59] mmcblk2rpmb: mmc2:0001 CJNB4R partition 3 4.00 MiB, chardev (235:0)
+[    1.676319][   T59]  mmcblk2: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14
+[    1.717888][    T1] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.719017][    T1] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.719217][   T35] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.719234][   T35] cfg80211: failed to load regulatory.db
+[    1.720064][    T1] rockchip-suspend not set sleep-mode-config for mem-lite
+[    1.720089][    T1] rockchip-suspend not set wakeup-config for mem-lite
+[    1.720099][    T1] rockchip-suspend not set sleep-mode-config for mem-ultra
+[    1.720106][    T1] rockchip-suspend not set wakeup-config for mem-ultra
+[    1.720993][    T1] I : [File] : drivers/gpu/arm/mali400/mali/linux/mali_kernel_linux.c; [Line] : 410; [Func] : mali_module_init(); svn_rev_string_from_arm of this mali_ko is '', rk_ko_ver is '5', built at '15:37:12', on 'Feb 17 2025'.
+[    1.721428][    T1] mali-utgard ff700000.gpu: mali_platform_device->num_resources = 8
+[    1.721445][    T1] mali-utgard ff700000.gpu: resource[0].start = 0x0x00000000ff700000
+[    1.721454][    T1] mali-utgard ff700000.gpu: resource[1].start = 0x0x0000000000000015
+[    1.721462][    T1] mali-utgard ff700000.gpu: resource[2].start = 0x0x0000000000000016
+[    1.721470][    T1] mali-utgard ff700000.gpu: resource[3].start = 0x0x0000000000000017
+[    1.721478][    T1] mali-utgard ff700000.gpu: resource[4].start = 0x0x0000000000000018
+[    1.721486][    T1] mali-utgard ff700000.gpu: resource[5].start = 0x0x0000000000000019
+[    1.721494][    T1] mali-utgard ff700000.gpu: resource[6].start = 0x0x000000000000001a
+[    1.721502][    T1] mali-utgard ff700000.gpu: resource[7].start = 0x0x000000000000001b
+[    1.721511][    T1] D : [File] : drivers/gpu/arm/mali400/mali/platform/rk/rk.c; [Line] : 679; [Func] : mali_platform_device_init(); to add platform_specific_data to platform_device_of_mali.
+[    1.721962][    T1] mali-utgard ff700000.gpu: leakage=3
+[    1.723869][    T1] mali-utgard ff700000.gpu: pvtm=721
+[    1.723956][    T1] mali-utgard ff700000.gpu: pvtm-volt-sel=0
+[    1.724508][    T1] mali-utgard ff700000.gpu: avs=0
+[    1.724715][    T1] mali-utgard ff700000.gpu: l=-2147483648 h=2147483647 hyst=0 l_limit=0 h_limmt=0 h_table=0
+[    1.726282][    T1] Mali: 
+[    1.726289][    T1] Mali device driver loaded
+[    1.726317][    T1] ALSA device list:
+[    1.726325][    T1]   #0: rockchip,hdmi
+[    1.726332][    T1]   #1: rk3528-acodec
+[    1.726338][    T1]   #2: ROCKCHIP,SPDIF
+[    1.726921][    T1] Freeing unused kernel memory: 1344K
+[    1.732149][    T1] Run /init as init process
+[    1.735304][    T1] init: init first stage started!
+[    1.735521][    T1] init: Unable to open /lib/modules, skipping module loading.
+[    1.735883][    T1] init: Copied ramdisk prop to /second_stage_resources/system/etc/ramdisk/build.prop
+[    1.736463][    T1] init: [libfs_mgr]ReadFstabFromDt(): failed to read fstab from dt
+[    1.739713][    T1] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    1.739852][    T1] init: Failed to read vbmeta partitions.
+[    1.761660][  T102] vendor storage:20190527 ret = 0
+[    1.802527][    T1] init: [libfs_mgr]superblock s_max_mnt_count:65535,/dev/block/by-name/metadata
+[    1.802752][    T1] init: [libfs_mgr]Filesystem on /dev/block/by-name/metadata was not cleanly shutdown; state flags: 0x1, incompat feature flags: 0x46
+[    1.803255][    T1] EXT4-fs (mmcblk2p11): Ignoring removed nomblk_io_submit option
+[    1.809448][    T1] EXT4-fs (mmcblk2p11): recovery complete
+[    1.809913][    T1] EXT4-fs (mmcblk2p11): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    1.810113][    T1] init: [libfs_mgr]check_fs(): mount(/dev/block/by-name/metadata,/metadata,ext4)=0: Success
+[    1.811773][    T1] init: [libfs_mgr]umount_retry(): unmount(/metadata) succeeded
+[    1.814785][    T1] EXT4-fs (mmcblk2p11): mounted filesystem with ordered data mode. Opts: discard
+[    1.831266][    T1] request_module fs-erofs succeeded, but still no fs?
+[    1.834783][    T1] EXT4-fs (dm-0): mounted filesystem without journal. Opts: barrier=1
+[    1.844007][    T1] EXT4-fs (dm-1): mounted filesystem without journal. Opts: barrier=1
+[    1.847984][    T1] EXT4-fs (dm-3): mounted filesystem without journal. Opts: barrier=1
+[    1.852127][    T1] EXT4-fs (dm-7): mounted filesystem without journal. Opts: barrier=1
+[    1.855911][    T1] EXT4-fs (dm-4): mounted filesystem without journal. Opts: barrier=1
+[    1.859875][    T1] EXT4-fs (dm-5): mounted filesystem without journal. Opts: barrier=1
+[    1.863832][    T1] EXT4-fs (dm-6): mounted filesystem without journal. Opts: barrier=1
+[    1.868172][    T1] EXT4-fs (dm-2): mounted filesystem without journal. Opts: barrier=1
+[    1.914114][    T1] printk: init: 38 output lines suppressed due to ratelimiting
+[    2.061848][    T1] init: Opening SELinux policy
+[    2.066229][    T1] init: Falling back to standard signature check. TODO implementent support for fsverity SEPolicy.
+[    2.066504][    T1] init: Error: Apex SEPolicy failed signature check
+[    2.066590][    T1] init: Loading APEX Sepolicy from /system/etc/selinux/apex/SEPolicy.zip
+[    2.066706][    T1] init: Failed to open package /system/etc/selinux/apex/SEPolicy.zip: No such file or directory
+[    2.076916][    T1] init: Loading SELinux policy
+[    2.106255][    T1] SELinux:  Permission bpf in class capability2 not defined in policy.
+[    2.106301][    T1] SELinux:  Permission checkpoint_restore in class capability2 not defined in policy.
+[    2.106331][    T1] SELinux:  Permission bpf in class cap2_userns not defined in policy.
+[    2.106339][    T1] SELinux:  Permission checkpoint_restore in class cap2_userns not defined in policy.
+[    2.106501][    T1] SELinux: the above unknown classes and permissions will be denied
+[    2.113355][    T1] SELinux:  policy capability network_peer_controls=1
+[    2.113405][    T1] SELinux:  policy capability open_perms=1
+[    2.113412][    T1] SELinux:  policy capability extended_socket_class=1
+[    2.113419][    T1] SELinux:  policy capability always_check_network=0
+[    2.113426][    T1] SELinux:  policy capability cgroup_seclabel=0
+[    2.113433][    T1] SELinux:  policy capability nnp_nosuid_transition=1
+[    2.113440][    T1] SELinux:  policy capability genfs_seclabel_symlinks=0
+[    2.113447][    T1] SELinux:  policy capability ioctl_skip_cloexec=0
+[    2.283407][   T37] audit: type=1403 audit(1.097:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    2.291251][    T1] selinux: SELinux: Loaded file_contexts
+[    2.291307][    T1] selinux: 
+[    2.329902][    T1] init: init second stage started!
+[    2.391801][    T1] init: Using Android DT directory /proc/device-tree/firmware/android/
+[    2.400802][    T1] init: Couldn't load property file '/vendor/default.prop': open() failed: No such file or directory: No such file or directory
+[    2.406643][    T1] init: Overriding previous property 'ro.build.fingerprint':'' with new value 'google/redfin/redfin:12/SP1A.210812.015/7679548:user/release-keys__2021-10-05'
+[    2.406965][    T1] init: Overriding previous property 'ro.com.google.clientidbase':'android-rockchip' with new value 'android-rockchip-tv'
+[    2.407704][    T1] init: Couldn't load property file '/data/local/system/note3.prop': open() failed: No such file or directory: No such file or directory
+[    2.416221][    T1] init: Setting product property ro.product.brand to 'RockChip' (from ro.product.product.brand)
+[    2.416325][    T1] init: Setting product property ro.product.device to 'rk3528_box' (from ro.product.product.device)
+[    2.416373][    T1] init: Setting product property ro.product.manufacturer to 'RockChip' (from ro.product.product.manufacturer)
+[    2.416421][    T1] init: Setting product property ro.product.model to 'H96_Max_RK3528' (from ro.product.product.model)
+[    2.488714][   T37] audit: type=1107 audit(1.302:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc:  denied  { read } for property=persist.sys.adb_enable pid=0 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:system_prop:s0 tclass=file permissive=1'
+[    2.489574][   T37] audit: type=1107 audit(1.303:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc:  denied  { read } for property=flash.success pid=0 uid=0 gid=0 scontext=u:r:vendor_init:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=1'
+[    2.578442][    T1] cgroup: Unknown subsys name 'schedtune'
+[    2.628987][  T130] linkerconfig: Unable to access VNDK APEX at path: /apex/com.android.vndk.v33: No such file or directory
+[    2.629306][  T130] linkerconfig: Unable to access VNDK APEX at path: /apex/com.android.vndk.v33: No such file or directory
+[    2.674420][  T131] ueventd: ueventd started!
+[    2.678710][  T131] selinux: SELinux: Loaded file_contexts
+[    2.678764][  T131] selinux: 
+[    2.679583][  T131] ueventd: Parsing file /system/etc/ueventd.rc...
+[    2.681187][  T131] ueventd: Added '/vendor/etc/ueventd.rc' to import list
+[    2.681347][  T131] ueventd: Added '/odm/etc/ueventd.rc' to import list
+[    2.682206][  T131] ueventd: Parsing file /vendor/etc/ueventd.rc...
+[    2.684547][  T131] ueventd: Parsing file /odm/etc/ueventd.rc...
+[    2.684770][  T131] ueventd: Unable to read config file '/odm/etc/ueventd.rc': open() failed: No such file or directory
+[    2.724464][  T132] apexd: Bootstrap subcommand detected
+[    2.726214][  T132] cutils-trace: Error opening trace file: No such file or directory (2)
+[    3.008781][  T132] apexd: wait for '/dev/loop-control' took 211ms
+[    3.010526][   T37] audit: type=1400 audit(1.824:5): avc:  denied  { create } for  pid=32 comm="kdevtmpfs" name="loop16" scontext=u:r:kernel:s0 tcontext=u:object_r:device:s0 tclass=blk_file permissive=1
+[    3.010573][   T37] audit: type=1400 audit(1.824:6): avc:  denied  { setattr } for  pid=32 comm="kdevtmpfs" name="loop16" dev="devtmpfs" ino=143 scontext=u:r:kernel:s0 tcontext=u:object_r:device:s0 tclass=blk_file permissive=1
+[    3.060327][  T132] apexd: Pre-allocated 30 loopback devices
+[    3.060612][  T132] apexd: Scanning /system/apex for pre-installed ApexFiles
+[    3.061265][  T132] apexd: Found pre-installed APEX /system/apex/com.google.android.art_compressed.apex
+[    3.062512][  T132] apexd: Found pre-installed APEX /system/apex/com.google.android.media_compressed.apex
+[    3.063462][  T132] apexd: Found pre-installed APEX /system/apex/com.google.android.tethering_compressed.apex
+[    3.064433][  T132] apexd: Found pre-installed APEX /system/apex/com.google.mainline.primary.libs.apex
+[    3.065359][  T132] apexd: Found pre-installed APEX /system/apex/com.google.android.adservices_compressed.apex
+[    3.158413][  T165] EXT4-fs (loop1): mounted filesystem without journal. Opts: (null)
+[    3.168366][  T166] EXT4-fs (loop0): mounted filesystem without journal. Opts: (null)
+[    3.197242][  T165] EXT4-fs (loop2): mounted filesystem without journal. Opts: (null)
+[    3.203805][  T166] EXT4-fs (loop3): mounted filesystem without journal. Opts: (null)
+[    3.223571][  T132] printk: apexd: 37 output lines suppressed due to ratelimiting
+[    3.536276][   T37] audit: type=1400 audit(2.350:7): avc:  denied  { mounton } for  pid=1 comm="init" path="/sys/kernel/debug/tracing" dev="debugfs" ino=235 scontext=u:r:init:s0 tcontext=u:object_r:debugfs_tracing_debug:s0 tclass=dir permissive=1
+[   !3.548794][   T37] audit: type=1400 audit�2.362:8): avc:  denied  { getattr } for  pid=129 comm="init" path="/sys/kernel/debug/tracing/trace_marker" dev="tracefs" ino=9413 scontext=u:r:vendor_init:s0 tcontext=u:object_r:debugfs_trace_marker:s0 tclass=file permissive=1
+[    3.563208][  T131] ueventd: Coldboot took 0.876 seconds
+[    3.582593][   T37] audit: type=1400 audit(2.396:9): avc:  denied  { setattr } for  pid=129 comm="init" name="status" dev="debugfs" ino=12290 scontext=u:r:vendor_init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+[    3.965617][    T1] Registered swp emulation handler
+[    4.048545][  T129] rkvtunnel: loading out-of-tree module taints kernel.
+[    4.050216][  T129] rk_videotunnel_driver rkvtunnel: probe start
+[    4.051005][  T129] rk_videotunnel_driver rkvtunnel: probe success
+console:/ $ [    4.089261][  T184] logd.auditd: start
+[    4.089393][  T184] logd.klogd: 2903348792
+[    4.103543][  T184] logd: Loaded bug_map file: /system_ext/etc/selinux/bug_map
+[    4.104087][  T184] logd: Loaded bug_map file: /vendor/etc/selinux/selinux_denial_metadata
+[    4.105492][  T184] logd: Loaded bug_map file: /system/etc/selinux/bug_map
+[    4.148956][    T1] EXT4-fs (mmcblk2p10): Ignoring removed nomblk_io_submit option
+[    4.156777][    T1] EXT4-fs (mmcblk2p10): recovery complete
+[    4.157577][    T1] EXT4-fs (mmcblk2p10): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    4.193998][    T1] e2fsck: e2fsck 1.46.2 (28-Feb-2021)
+[    4.199702][    T1] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[    4.203430][    T1] e2fsck: Pass 2: Checking directory structure
+[    4.206215][    T1} e2fsck: Pass 3: Checking directory connectivity
+[    4.206752][    T1] e2fsck: Pass 4: Checking reference counts
+[    4.214253][    T1] e2fsck: Pass 5: Checki�g group summary information
+[    4.242651][    T1] e2fsck: /dev/block/by-name/cache: 23/98304 files (0.0% non-contiguous), 16451/98304 blocks
+[    4.249853][    T1] EXT4-fs (mmcblk2p10): mounted filesystem with ordered data mode. Opts: noauto_da_alloc,diskard
+[    4.414479][   T14] PELT half life is se~ to 8ms
+[    4.502114][  T199] type=1400 audit(3.314:10): avc: denied { write } for comm="tee-supplicant" name="property_service" dev="tmpfs" ino=336 scontext=u:r:tee:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+[    4.502539][  T199] type=1400 audit(3.314:11): avc: denied { connectto } for comm="tee-supplicant" path="/dev/socket/property_service" scontext=u:r:tee:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+[    4.503369][  T199] type=1107 audit(3.315:12): uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc: denied { set } for property=vendor.security.tee_supplicant pid=211 uid=0 gid=0 scontext=u:r:tee:s0 tcontext=u:object_r:vendor_default_prop:s0 tclass=property_service0permissive=1'
+[    4.604169][  T198] Checkpoint: No magic
+[    5.605185][  T221] vdc: Command: checkpoint restoreCheckpoint /dev/block/by-name/userdata Failed: Status(-8, EX_SERVICE_SPECIFIC): '22: No magic'
+[    4.650136][    T1] EXT4-fs (mmcblk2p14): Ignoring removed nomblk_io_submit option
+[    4.650223][    T1] EXT4-fs (mmcblk2p14): Using encoding defined by superblock: utf8-12.1.0 with flags 0x0
+I/TA: Hello Rockchip Keymaster! ver:20221212 rpmb :0
+[    4.711795][  T199] type=1400 audit(3.525:13): avc: denied { read } for comm="android.hardwar" name="u:object_r:serialno_prop:s0" dev="tmpfs" ino=258 scontext=u:r:hal_keymint_default:s0 tcontext=u:object_r:serialno_prop:s0 tclass=file permissive=1
+[    4.712406][  T199] type=1400 audit(3.525:14): avc: denied { open } for comm="android.hardwar" path="/dev/__properties__/u:object_r:serialno_prop:s0" dev="tmpfs" ino=258 scontext=u:r:hal_keymint_default:s0 tcontext=u:object_r:serialno_prop:s0 tclass=file permissive=1
+[    6.043856][    T1] EXT4-fs (mmcblk2p14): 12 orphan inodes deleted
+[    6.043907][    T1] EXT4-fs (mmcblk2p14): recovery complete
+[    6.053956][    T1] EXT4-fs (mmcblk2p14): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    6.119454][    T1] e2fsck: e2fsck 1.46.2 (28-Feb-2021)
+[    6.235807][    T1] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[   11.107261][    T1] e2fsck: Pass 2: Checking directory structure
+[   14.189711][    T1] e2fsck: Pass 3: Checking directory connectivity
+[   14.253938][    T1] e2fsck: Pass 4: Checking reference counts
+[   14.576179][    T1] e2fsck: Pass 5: Checking group summary information
+[   15.003903][    T1] e2fsck: /dev/block/by-name/userdata: 150119/3494568 files (2.6% non-contiguous), 7540161/13974520 blocks
+[   15.13315p][    T1] init: [libfs_mgr]superblock s_max_mnt_count:65535,/dev/block/by-name/userdata
+[   15.133807][    T1] EXT4-fs (mmcblk2p14): Using encoding defined by superblock: utf8-12.1.0 with flags 0x0
+[   15.141359][ `  T1]"EXT4-fs (mmcblk2p14): mounted filesystem with ordered data mode. Opts: discard,noauto_da_alloc,data=ordered,user_xattr,barrier=1
+[   15.141632][    T1] init: [libfs_mgr]__mount(source=/dev/block/by-name/userdata,target=/data,type=ext4)=0: Success
+[   15.142278][    T1] init: [libfs_mgr]/data is file encrypted
+[   15.189908][    T1] init: Userdata mounted using /vendor/etc/fstab.rk30board result : 5
+[   15.190148][    T1] init: Keyring created with id 301014376 in process 1
+[   15.190772][    T1] init: Command 'mount_all /vendor/etc/fstab.${ro.hardware} --late' action=late-fs (/vendor/etc/init/hw/init.mount_all.rc:19) took 10630ms and succeeded
+[   15.195251][    T1] init: starting service 'vendor.hwcomposer-2-1'...
+[   15.200560][    T1] init: Control mussage: Processed ctl.interface_start for 'android.hardware.graphics.composer@2.1::IComposer/default' from pid: 187 (/system/bin/hwservicemanager)
+[   15.200948][    T1] init: processing action (late-fs) from (/vendor/etc/init/hw/init.rk3528.rc:124)
+[   15.201442][    T1] init: Command 'start hwcomposer-2-1' action=late-fs (/vendor/etc/init/hw/init.rk3528.rc:126) took 0ms and failed: service hwcompos�r-2-1 not found
+[   15.376787][  T199] type=1400 audit(14.190:23): avc: denied { read } for comm="android.hardwar" name="resolution_white.xml" dev="dm-0" ino=3018 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   15.377480][  T199] type=1400 audit(14.190:24): avc: denied { open } for comm="android.hardwar" path="/system/usr/share/resolution_white.xml" dev="dm-0" ino=3018 scontext=u:r:hal_graphics_composer_default:s00tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   15.377808][  T199] type=1400 audit(14.190:25): avc: denied { getattr } for comm="android.hardwar" path="/system/usr/share/resolution_white.xml" dev="dm-0" ino=3018 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   15.398294][    T1] fscrypt: AES-256-CTS-CBC using implementation "cts-cbc-aes-ce"
+[   15.402227][    T1] fscrypt: AES-256-XTS using implementation "xts-aes-ce"
+[   15.496191][  T198] vold: keystore2 Keystore earlyBootEnded returned service specific error: -68
+[   15.547067][  T196] logd: logd reinit
+[   15.550114][  T196] logd: FrameworkListener: read() failed (Connection reset by peer)
+[   15.563925][  T284] apexd: Scanning /system/apex for pre-installed ApexFiles
+[   15.564794][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.art_compressed.apex
+[   15.566021][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.media_compressed.apex
+[   15.567137][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.tethering_compressed.apex
+[   15.568184][  T284] apexd: Found pre-installed APEX /system/apex/com.google.mainline.primary.libs.apex
+[   15.569211][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.adservices_compressed.apex
+[   15.570277][  T284] apexd: Found pre-installed APEX /system/apex/com.android.wifi.capex
+[   15.571359][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.tzdata4.apex
+[   15.572313][  T284] apexd: Found pre-installed APEX(/system/apex/com.android.apex.cts.shim.apex
+[   15.573736][  T284] apexd: Found pre-installed APEX /system/apex/com.google.android.ipsec_compressed.apex
+[   15.803520][  T199] type=1400 audit(14.617:26): avc: denied { read } for comm="android.hardwar" name="u:object_r:default_prop:s0" dev="tmpfs" ino=134 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=1
+[   15.803927][  T199] type=1400 audit(14.617:27): avc: denied { open!} for comm="android.hardwar" path="/dev/__properties__/u:object_r:default_prop:s0" dev="tmpfs" ino=134 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=1
+[   15.804507][  T199] type=1400 audit(14.617:28): avc: denied { getattr } for comm="android.hardwar" path="/dev/__properties__/u:object_r:default_prop:s0" dev="tmpfs" ino=134 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=1
+[   15.804969][  T199] type=1400 audit(14.617:29): avc: denied { map } for comm="andro�d.hardwar" path="/dev/__properties__/u:object_r:default_prop:s0" dev="tmpfs" ino=134 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=1
+[   15.858604][  T291] EXT4-fs (loop5): mounted filesystem without journal. Opts: (null)
+[   15.858979][  T290] EXT4-fs (loop4): mounted filesystem without journal. Opts: (null)
+[   15.888229][  T199] type=1400 audit(14.701:30): avc: denied { read write } for comm="android.hardwar" name="rkvtunnel" dev="tmpfs" ino=645 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   15.891917][  T291] EXT4-fs (loop6): mounted filesystem without journal. Opts: (null)
+[   15.893666][  T290] EXT4-fs (loop7): mounted filesystem without journal. Opts: (null)
+[   15.927833][  T291] EXT4-fs (loop9): mounted filesystem without journal. Opts: (null)
+[   15.929921][  T290] EXT4-fs (loop8): mounted filesystem without journal. Opts: (null)
+[   15.955563][  T291] EXT4-fs (loop10): mounted filesystem without journal. Opts: (null)
+[   15.962069][` T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   15.966544][  T290] EXT4-fs (dm-35): mounted filesystem without journal. Opts: (null)
+[   15.980142][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   15.985335][  T291] EXT4-fs (dm-34): mounted filesystem without journal. Opts: (null)
+[   15.997914][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.003865][  T290] EXT4-fs (dm-33): mounted filesystem without journal. Opts: (null)
+[   16.015551][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.025897][  T291] EXT4-fs (dm-32): mounted filesystem without journal. Opts: (null)
+[   16.036976][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.040588][  T290] EXT4-fs (dm-31): mounted filesystem without journal. Opts: (null)
+[   16.055632][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.059140][  T291] EXT4-fs (dm-30): mounted filesystem without journal. Opts: (null)
+[   16.065155][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.069181][  T290] EXT4-fs (dm-27): mounted filesystem without journal. Opts: (null)
+[   16.081081][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.085103][  T291] EXT4-fs (dm-24): mounted filesystem without journal. Opts: (null)
+[   16.099800][  T290] device-mapper: verity: sha256 using implementetion "sha256-ce"
+[   16.103688][  T290] EXT4-fs (dm-21): mounted filesystem without journal. Opts: (null)
+[   16.112483][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.121463][  T291] EXT4-fs (dm-23): mounted filesystem without journal. Opts: (null)
+[   16.132358][  T290] device-mapper: verity: sha256 u�ing implementation "sha256-ce"
+[   16.136290][  T290] EXT4-fs (dm-19): mounted filesystem without journal. Opts: (null)
+[   16.153080][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.156716][  T291] EXT4-fs (dm-20): mounted filesystem without journal. Opts: (null)
+[   16.168407][  T290] device-mapper: verity:0sha256 using implementation "sha256-ce"
+[   16.177916][  T290] EXT4-fs (em-26): mounted filesystem without journal. Opts: (null)
+[   16.187569][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.191971][  T291] GXT4-fs (dm-15): mounted filesystem without journal. Opts: (null)
+[   16.207332][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.216564][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.219498][  T:90] EXT4-fs (dm-17): mounted filesystem without journal. Opts: (null)
+[   16.233995][  T291] EXT4-fs (dm-18): mounted filesystem without journal. Opts: (null)
+[   16.248182][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.252804][  T290] EXT4-fs (dm-12): mounted filesystem without journal. Opts: (null)
+[   16.268887][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.274787][  T291] EXT4-fs (dm-14): mounted filesystem without journal. Opts: (null)
+[   16.283392][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.292675][  T290] EXT4-fs (dm-10): mounted filesystem without journal. Opts: (null)
+[   16.309443][  T291] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.316847][  T291] EXT4-fs (dm-9): mounted filesystem without journal. Opts: (null)
+[   16.325323][  T290] device-mapper: verity: sha256 using implementation "sha256-ce"
+[   16.329897][  T290] EXT4-fs (dm-8): mounted filesystem without journal. Opts: (null)
+[   17.404295][  T407] audit: audit_backlog=65 >"audit_backlog_limit=64
+[   17.404350][  T407] audit: audit_lost=1 audit_rate_limit=0 audit_backlog_limit=64
+[   17.404359][  T407] audit: backlog limit exceeded
+[   17.404621][  T407] audit: audit_backlog=65 > audit_backlog_limit=64
+[   17.404648][  T407] audit: audit_lost=2 audit_rate_limit=0 audit_backlog_limit=64
+[   17.404656][  T407] audit: backlog limit exceeded
+[   17.405326][  T407] audit: audit_backlog=65 > audit_backlog_limit=64
+[   17.405353][  T407] audit: audit_lost=3 audit_rate_limit=0 audit_backlog_limit=64
+[   17.405360][  T407] audit: backlog limit exceeded
+[   17.405381][  T407] audit: audit_backlog=65 > audit_backlog_limit=64
+[   17.529107][  T409] apexd: Snapshot DE subcommand detected
+[   17.531400][  T409] apexd: Marking APEXd as ready
+[   17.652289][  T413] LibBpfLoader: Section bpfloader_min_ver value is 2 [0x2]
+[   17.652525][  T413] LibBpfLoader: Section bpfloader_max_ver value is 25 [0z19]
+[   17.652689][  T413] LibBpfLoader: Section size_of_bpf_map_def value is 120 [0x78]
+[   17.652828][  T413] LibBpfLoader: Section size_of_bpf_prog_def va|ue is 92 [0x5c]
+[   17.652852][  T413] LibBpfLoader: BpfLoader version 0x00013 processing ELF object /apex/com.android.tethering/etc/bpf/test.o with ver [0x00002,0x00019)
+[   18.140384][  T413] printk: bpfloader: 1649 output lines suppressed due to ratelimiting
+[   18.209293][  T129] init: Verified that /data/nfc has the encryption policy 1209c2dd23410506edbe983cedf7a07b v2 modes 1/4 flags 0x2
+[   18.210911][  T129] init: Inferred action different from explmcit one, expected 0 but got 2
+[   18.211466][  T129] init: Verified that /data/nfc/param has the encryption policy 1209c2dd23410506edbe983cedf7a07b v2 modes 1/4 flags 0x2
+[   18.240196][  T129] file system registered
+[   18.243554][  T129] using random self ethernet address
+[   18.243613][  T129] using random host ethernet address
+[   18.333006][  T129] using random self ethernet address
+[   18.333104][  T129] using random host ethernet address
+[   18.863994][  T451] healthd: No battery devices found
+[   18.875308][  T451] healthd: battery none chg=
+I/TA: Hello Rockchip gatekeeper! rpmb :0
+I/TA: Hello Rockchip Weaver! rpmb :0
+[   19.388524][  T465] aicbsp_init
+[   19.388662][  T465] RELEASE_DATE:2024_0615_c3cb37b3
+[   19.388675][  T465] aicbsp_resv_mem_init 
+[   19.631593][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_mod_init()
+[   19.631672][  T465] AICWFDBG(LOGINFO)	rwnx v6.4.3.0 - - 241c091M (master)
+[   19.631683][  T465] AICWFDBG(LOGINFO)	RELEASE_DATE:2024_0615_c3cb37b3 
+[   19.631691][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array Enter 
+[   19.631701][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[0]:000000000753fbf7 
+[   19.631709][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[1]:00000000e564eb53 
+[   19.631716][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[2]:0000000022555cf3 
+[   19.631722][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[3]:000000004d5befdb 
+[   19.631730][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[4]:000000009c9f9ec7 
+[   19.631737][  T465} AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[5]:00000000d204229b 
+[   19.631744][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[6]:00000000d05e7a5c 
+[   19.631751][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[7]:00000000ed6aa980 
+[   19.631758][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[8]:000000009f31529e 
+[   19.631765][  T465] AICWGDBg(LOGTRACE)	rwnx_init_cmd_array cmd_queue[9]:00000000a6387fa9 
+[   19.631773][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[10]:00000000b2b8e737 
+[   19.631780][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[11]:00000000553731e5 
+[   19.631788][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[12]:00000000df043bad 
+[   19.6s1795][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[13]:00000000858dfa18 
+[   19.631802][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[14]:0000000017a75f80 
+[   19.631809][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[15]:000000008e207cba 
+[   19.631816][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[16]:00000000ca84a47b 
+[   19.631823][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[17]:0000000072de3791 
+[   19.631830][  T465] AiCWFDBG(LOGTRACE)	rwnx_init_cmd_array cmd_queue[18]:000000000208603c 
+[   19.631838][  T465] AICWFDBG(LO�TRACE)	rwnx_init_cmd_array cmd_queue[19]:0000000045d27bf1 
+[   19.633083][  T465] AICWFDBG(LOGTRACE)	rwnx_init_cmd_array Exit 
+[   19.633114][  T465] aicbsp: aicbsp_set_subsys, subsys: AIC_WIFI, state to: 1
+[   19.633121][  T465] aicbsp: aicbsp_set_subsys, power state change to 1 dure to AIC_WIFI
+[   19.633127][  T465] aicbsp: aicbsp_platform_power_on
+[   19.675193][  T465] aicbsp: aicbsp_sdio_probe:1 vid:0xC8A1  did:0x0082
+[   19.675828][  T465] aicbsp: aicbsp_sdio_probe:2 vid:0xC8A1  did:0x0182
+[   19.675860][  T465] aicbsp: aicbsp_sdio_probe after replace:1
+[   19.675873][  T465] AICWFDBG(LOGINFO)	aicwf_wdio_chipmatch USE AIC8800D80
+[   19.675882][  T465] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   19.675890][  T465] aicbsp: aicwf_sdio_reg_init
+[   19.693371][  T465] [xw] before reg = 0x3
+[   19.693673][  T465] [xw] after reg = 0x3
+[   19.699699][  T465] AICWFDBG(LOGINFO)	aicbsp: aicbsp_driver_fw_init, chip rev: 7
+[   19.699741][  T465] rwnx_load_firmware :firmware path = /vendor/etc/firmware/fw_patch_table_8800d80_u02.bin  
+[   19.703943][  T465] file md5:d973f2c2d449aade3679e1401f016b1a
+[   19.704177][  T465] rwnx_plat_bin_fw_upload_android
+[   19.704208][  T465] rwnx_load_firmware :firmware path = /vendor/etc/firmware/fw_adid_8800d80_u02.bin  
+[   19.705757][  T465] file md5:f546881a81b960d89a67257<eb45a809
+[   19.760397][  T465] rwnx_plat_bin_fw_upload_android
+[   19.760461][  T465] rwnx_load_firmware :firmware path = /vendor/etc/firmware/fw_patch_8800d80_u02.bin  
+[   19.762481][  T465] file md5:60a220329bf26ab7effebee4f807708a
+[   20.134283][    T1] init: processing action (debug.atrace.user_initiated= && persist.traced.enable=1) from (/system/etc/init/perfetto.rc:47)
+[   20.137643][    T1] init: starting service 'traced_probes'...
+[   20.158002][    T1] init: processing action (persist.traced.enable=1) from (/system/etc/init/perfetto.rc:50)
+[   20.162204][    T1]`init: starting service 'traced'...
+[   20.167105][    T1] init: Created socket '/dev/socket/traced_consumer', mode 666, user 0, group 0
+[   20.168532][    T1] init: Created socket '/dev/socket/traced_producer', mode 666, user 0, group 0
+[   20.303255][    T1] init: Command 'start traced' action=persist.traced.enable=1 (/system/etc/init/perfetto.rc:65) took 143ms and succeeded
+[   20.303678][    T1] init: service 'traced_probes' requested start, but it is already running (flags: 132)
+[   20.303911][    T1] init: processing action (ro.persistent_properties.ready=true) from (/system/etc/init/perfetto.rc:116)
+[   20.304309][    T1] init: processing action (persist.traced_perf.enable= && sys.init.perf_lsm_hooks=1 && traced.lazy.traced_perf=) from (/system/etc/init/traced_perf.rc:43)
+[   20.500221][  T532] read descriptors
+[   20.500290][  T532] read strings
+[   21.031948][  T465] aicbt_patch_table_load bt btmode[3]:5 
+[   21.032061][  T465] aicbt_patch_table_load bt uart_baud[3]:1500000 
+[   21.032079][  T465] aicbt_patch_table_load bt uart_flowctrl[3]:1 
+[   21.032086][  T465] aicbt_patch_table_load bt lpm_enable[3]:0 
+[   21.032094][  T465] aicbt_patch_table_load bt tx_pwr[3]:28463 
+[   21.045599][  T465] aicbsp: bt patch version: - Apr 29 2024 15:51:03 - git a3b83af
+[   21.045714][  T465] rwnx_plat_bin_fw_upload_android
+[   21.045732][  T465] rwnx_load_firmware :firmware path = /vendor/etc/firmware/fmacfw_8800d80_u02.bin  
+[   21.058234][  T199] type=1400 audyt(19.870:488): avc: denied { search } for comm="rockchip.drmser" name="block" dev="tmpfs" ino=13 scontext=u:r:np_rockchip_drmservice:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+[   21.058780][  T199] type=1400 audit(19.871:489): avc: denied { read } for comm="rockchip.drmser" name="mmcblk2boot0" dev="tmpfs" ino=457 scontext=u:r:np_rockchip_drmservice:s0 tcontext=u:object_r:uboot_block_device:s0$tclass=blk_file permissive=1
+[   21.059618][  T465] file md5:3682254d368c89efaa92f122b34233df
+[   21.082525][  T199] type=1400 audit(19.871:490): avc: denied { open } for comm="rockchip.drmser" path="/dev/bloco/mmcblk2boot0" dev="tmpfs" ino=457 scontext=u:r:np_rockchip_drmservice:s0 tcontext=u:object_r:uboot_block_device:s0 tclass=blk_file permissive=1J[   21.100495][  T199] type=1400 audit(19.871:491): avc: denied { write } for comm="rockchip.drmser" name="mmcblk2" dev="tmpfs" ino=405 scontext=u:r:np_rockchip_drmservice:s0 tcontext=u:object_r:uboot_block_device:s0 tclass=blk_file permissive=1
+[   21.120542][  T199] type=1400 audit(19.871:492): avc: denied { getattr } for comm="rockchip.drmser" path="/dev/block/mmcblk2" dev="tmpfs" ino=405 scontext=u:r:np_rockchip_drmservice:s0 tcontext=u:object_r:uboot_block_device:s0 tclass=blk_file permissive=1
+[   21.253654][  T465] rd_version_val=06090101
+[   21.296318][  T465] AICWFDBG(LOGDEBUG)	aicwf_sdio_probe:1
+[   21.296355][  T465] AICWFDBG(LOGDEBUG)	Class=7
+[   21.296363][  T465] AICWFDBG(LOGDEBUG)	sdio vendor ID: 0xc8a1
+[   21.296370][  T465] AICWFDBG(LOGDEBUG)	sdio device ID: 0x0082
+[   21.296377][  T465] AICWFDBG(LOGDEBUG)	Function#: 1
+[   21.296386][  T465] AICWFDBG(LOGINFO)	aicwf_sdio_chipmatch USE AIC8800D80
+[   21.296394][  T465] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   21.296401][  T465] aicsdio: aicwf_sdio_reg_init
+[   21.301746][  T465] AICWFDBG(LOGINFO)	sdio ready
+[   21.304206][  T465] aicbsp: aicbsp_resv_mem_alloc_skb, alloc resv_mem_txdata succuss, id: 0, size: 98304
+[   21.325486][  T566]�AICWFDBG(LOGINFO)	sdio_bustx_thread the policy of current thread is:1
+[   21.325532][  T566] AICWFDBG(LOGINFO)	sdio_bustx_thread the rt_priority of current thread is:1
+[   21.325540][  T566] AICWFDBG(LOGINFO)	sdio_bustx_thread the currgnt pid is:566
+[   21.327057][    C0] aicbsp: sdio_err:<aicwf_sdio_bus_pwrctl,1402>: bus down
+[   21.335262][  T465] [xw] before reg = 0x3
+[   21.335379][  T465] [xw] after reg = 0x3
+[   21.335444][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_platform_init()
+[   21.335453][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_cfg80211_init()
+[   21.335463][  T465] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   21.335476][  T465] AICWFDBG(LOGINFO)	rwnx_cfg80211_init sizeof(struct rwnx_hw):18896 
+[   21.335534][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_init_aic()
+[   21.335543][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_cmd_mgr_init()
+[   21.338129][  T567] AICWFDBG(LOGINFO)	sdio_busrx_thread the policy of current thread is:1
+[   21.338162][  T567] AICWFDBG(LOGINFO)	sdio_busrx_thread the rt_priority of current thread is:1
+[   21.338171][  T567] AICWFDBG(LOGINFO)	sdio_busrx_thread the current pid is:567
+[   21.341849][  T465] tcp_ack_init 
+[   21.341887][  T465] AICWFDBG(LOGINFO)	aicwf_prealloc_txq_alloc size is diff will to be kzalloc 
+[   21.341913][  T465] AICWFDBG(LOGINFO)	aicwf_prealloc_txq_alloc txq kzalloc successful 
+[   21.363199][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_dbg_mem_read_req()
+[ ( 21.363249][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (1025)DBG_MEM_READ_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.363266][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.363881][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x401 
+[   21.363966][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   21.363983][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_dbg_mem_read_req()
+[   21.363996][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (1025)DBG_MEM_READ_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.364008][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.364359][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0y401 
+[   21.364416][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   21.364449][  T465] AICWFDBG(LOGINFO)	FDRV chip_id=7, chip_sub_id=2!!
+[   21.364457][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_platform_on()
+[   21.364467][  T465] AICWFDBG(LOGINFO)	userconfig file path:aic_userconfig_8800d80.txt 
+[   21.364474][  T465] AICWFDBG(LOGINFO)	### Load file aic_userconfig_8800d80.txt
+[   21.364485][  T465] AICWFDBG(LOGINFO)	rwnx_load_firmware :firmware path = /vendor/etc/firmware/aic_userconfig_8800d80.txt  
+[   21.375346][  T465] aICWFDBG(LOGINFO)	file md5:35c8e99f3edd34d2a39bc9920e1da494
+[   21.375393][  T465] AICWFDBG(LOGINFO)	### Load file done: aic_userconfig_8800d80.txt, size=2683
+[   21.375403][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: AIC USERCONFIG 2022/0803/1707
+[   21.375411][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: txpwr_lvl
+[   21.375420][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=enable value=1
+[   21.375429][  T465] AICWFDBG(LOGINFO)	rwn�_plat_nvram_set_value_v3:command=lvl_11b_11ag_1m_2g4 value=18
+[   21.375439][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_2m_2g4 value=18
+[   21.375447][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_5m5_2g4 value=18
+[   21.375455][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_11m_2g4 value=18
+[   21.375464][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_6m_2g4 value=18
+[   21.375472][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_9m_2g4 value=18
+[   21.375481][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_12m_2g4 value=18
+[   21.375490][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_18m_2g4 value=18
+[   21.375498][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_24m_2g4 value=16
+[   21.375506][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_36m_2g4 value=16
+[   21.375514][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_48m_2g4 value=15
+[   21.375523][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11b_11ag_54m_2g4 value=15
+[   21.375532][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs0_2g4 value=18
+[   21.375541]_  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_�1n_11ac_mcs1_2g4 value=18
+[   21.375549][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs2_2g4 value=18
+[   21.375558][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs3_2nx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs8_2g4 value=14
+[   21.375631][  T465] AICWFLBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs9_2g4 value=14
+[   21.375640][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs0_2g4 value=18
+[   21.375649][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs1_2g4 value=18
+[   21.375657][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs2_2g4 value=18
+[   21.375666][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs3_2g4 value=18
+[   21.375675][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs4_2g4 value=16
+[   21.375684][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs5_2g4 value=16
+[   21.375693][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs6_2g4 value=15
+[   21.375702][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:comg4 valu�=18
+[   21.375566][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs4_2g4 value=16
+[   21.375575][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs5_2g4 v�lue=16
+[   21.375584][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs6_2g4 value=15
+[   21.375604][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs7_2g4 value=15
+[   21.375622][  T465] AICWFDBG(LOGINFO)	rwmand=lvl_11ax_mcs7_2g4 value=15
+[   21.375711][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs8_2g4 value=14
+[   21.375720][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs9_2g4 value=14
+[   21.375729][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs10_2g4 value=13
+[   21.375738][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_valuev3:command=lvl_11ax_mcs11_2g4 value=13
+[   21.375748][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_6m_5g value=18
+[   21.375758][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_9m_5g value=18
+[   21.375?68][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_12m_5g value=18
+[   21.375778][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_18m_5g value=18
+[   21.375787][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_24m_5g value=16
+[   21.375796][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_36m_5g value=16
+[   21.375806][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_48m_5g value=15
+[   21.375817][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11a_54m_5g value=15
+[   21.375826][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs0_5g value=18
+[   21.375836][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs1_5g value=18
+[   21.375846][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs2_5g value=18
+[   21.375857][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs3_5g value=18
+[   21.375866][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs4_5g value=16
+[   21.375876][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs5_5g value=16
+{   21.375886][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs6_5g value=15
+[   21.375897][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs7_5g value=15
+[   21.375907][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs8_5g value=14
+[   21.375918][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11n_11ac_mcs9_5g value=14
+[   21.375929][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs0_5g value=18
+[   21.375939][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs1_5g value=18
+[   21.375949][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs2_5g value=18
+[   21.375959][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs3_5g value=18
+[   21.375969][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs4_5g value=16
+[   21.375981][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs5_5g value=16
+[   21.375991][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs6_5g value=14
+[   21.376002][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs7_5g value=14
+[   21.376012][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs8_5g value=13
+[   21.376140][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs9_5g value=13
+[   21.376164][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs10_5g value=12
+[   21.376175][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_11ax_mcs11_5g value=12
+[   21.376186][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: txpwr_lvl_adj
+[   21.376193][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_enable value=0
+[   21.376203][  T465] AICWFDBG(LOGINFO)	rwny_plat_nvram_set_value_v3:command=lvl_adj_2g4_chan_1_4 value=0
+[   21.376213][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_2g4_chan_5_9 value=0
+[   21.376223][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_2g4_chan_10_13 value=0
+[   21.376234][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_42 value=0
+[   21.376244][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_58 value=0
+[   21.376254][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_106 value=0
+[   21.376264][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_122 value=0
+[   21.376275][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_138 value=0
+[   21.376286][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=lvl_adj_5g_chan_155 value=0
+[   21.376296][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: txpwr_loss
+[   21.376303][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=loss_enable value=0
+[   21.376313][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=loss_value value=2
+[   21.376322][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: txpwr_ofst
+[   21.376329][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_enable value=0
+[   21.376339][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_11b_chan_1_4 value=0
+[   21.376350][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_11b_chan_5_9 value=0
+[   21.376360][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_11b_chan_10_13 value=0
+[   21.376370][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_highrate_chan_1_4 value=0
+[   21.376381][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_highrate_chan_5_9 value=0
+[   21.376391][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_highrate_chan_10_13 value=0
+[   21.376402][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_lowrate_chan_1_4 value=0
+[   21.376412][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_lowrate_chan_5_9 value=0
+[   21.376423][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_2g4_ofdm_lowrate_chan_10_13 value=0
+[   21.376433][  T465] AICWFDBG(LOGINFO)	rwnx_pmat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_42 value=0
+[   21.376444][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_58 value=0
+[   21.376455][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_106 value=0
+[   21.376465][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_122 value=0
+[   21.376475][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_138 value=0
+[   21.376486][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_lowrate_chan_155 value=0
+[   21.376496][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_42 value=0
+[   21.376507][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_58 value=0
+[   21.376518][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_106 vilue=0
+[   21.376530][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_122 value=0
+[   21.376541][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_138 value=0
+[   21.376552][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_highrate_chan_155 value=0
+[   21.376564][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_42 value=0
+[   21.376575][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_58 value=0
+[   21.376586][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_106 value=0
+[   21.376597][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_122 value=0
+[   21.376608][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_178 value=0
+[   21.376619][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=ofst_5g_ofdm_midrate_chan_155 value=0
+[   21.376629][  T465] AICWFDBG(LOGINFO)	rwnx_plat_userconfig_parsing3: xtal cap
+[   21.376636][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=xtal_enable valum=0
+[   21.376646][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=xtal_cap value=24
+[   21.376656][  T465] AICWFDBG(LOGINFO)	rwnx_plat_nvram_set_value_v3:command=xtal_cap_fine value=31
+[   21.376667][  T465] AICWFDBG(LOGINFO)	userconfig download complete
+[   21.376667][  T465] 
+[   21.376683][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (124)MM_SET_STACK_START_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.376701][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.377175][  T567] AMCWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x7c 
+[   21.377257][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   21.377273][  T465] AICWFDBG(LOGINFO)	is 5g support = 1, vendor_info = 0x00
+[   21.377287][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (129)MM_GET_FW_VERSION_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.377297][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.379092][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x81 
+[   21.384441][  T465] AICWFDBG(LOGTRA�E)	rwnx_cmd_free cmd_qrray[0]:000000000753fbf7 
+[   21.384475][  T465] AICWFDBG(LOGINFO)	Firmware Version: zh Jun 14 2024 22:05:14 - gc3432e3
+[   21.384485][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_txpwr_lvl_v3_req()
+[   21.384496][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:enable:1
+[   21.384503][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_1m_2g4:18
+[   21.384511][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_2m_2g4:18
+[   21.384518][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_5m5_2g4:18
+[   21.384526][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_11m_2g4:18
+[   21.384532][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_6m_2g4:18
+[   21.384540][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_9m_2g4:18
+[   21.384547][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_12m_2g4:18
+[   21.384555][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_18m_2g4:18
+[   21.384563][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_24m_2g4:16
+[   21.384570][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_36m_2g4:16
+[   21.384578][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_48m_2g4:15
+[   21.384585][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11b_11ag_54m_2g4:15
+[   21.384593][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs0_2g4:18
+[   21.384600][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs1_2g4:18
+[   21.384634][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs2_2g4:18
+[   21.384646][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs3_2g4:18
+[   21.384653][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs4_2g4:16
+[   21.384660][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs5_2g4:16
+[   21.384666][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs6_2g4:15
+[   21.384674][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs7_2g4:15
+[   21.384681][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs8_2g4:14
+[   21.384688][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs9_2g4:14
+[   21.384695][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs0_2g4:18
+[   21.384703][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs1_2g4:18
+[   21.384710][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs2_2g4:18
+[   21.384718][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs3_2g4:18
+[   21.384725][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs4_2g4:16
+[   21.384733][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs5_2g4:16
+[   21.384740][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs6_2g4:15
+[   21.384747][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs7_2g4:15
+[   21.384754][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs8_2g4:14
+[   21.384762][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs9_2g4:14
+[   21.384768][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs10_2g4:13
+[   21.384775][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs11_2g4:13
+[   21.384782][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_1m_5g:-128
+[   21.384789][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_2m_5g:-128
+[   21.384796][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_5m5_5g:-128
+[   21.384803][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_11m_5g:-128
+[   21.384810][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_6m_5g:18
+[   21.384817][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_9m_5g:18
+[   21.384824][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_12m_5g:18
+[   21.384831][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_18m_5g:18
+[   21.384838][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_24m_5g:16
+[   21.384845][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_36m_5g:16
+[   21.384852][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_48m_5g:15
+[   21.384859][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11a_54m_5g:15
+[   21.384866][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs0_5g:18
+[   21.384872][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs1_5g:18
+[   21.384880][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs2_5g:18
+[   21.384887][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs3_5g:18
+[   21.386310][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs4_5g:16
+[   21.386341][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs5_5g:16
+[   21.386350][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs6_5g:15
+[   21.386357][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs7_5g:15
+[   21.386365][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs8_5g:14
+[   21.386372][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11n_11ac_mcs9_5g:14
+[   21.386378][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs0_5g:18
+[   21.386385][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs1_5g:18
+[   21.386394][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs2_5g:18
+[   21.386400][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs3_5g:18
+[   21.386408][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs4_5g:16
+[   21.386415][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs5_5g:16
+[   21.386423][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs6_5g:14
+[   21.386430][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs7_5g:14
+[   21.386437][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs8_5g:13
+[   21.386444][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs9_5g:13
+[   21.386452][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs10_5g:12
+[   21.386459][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_v3_in_fdrv:lvl_11ax_mcs11_5g:12
+[   21.386467][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_loss:loss_enable:0
+[   21.386474][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_loss:loss_value:2
+[   21.386536][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:enable:1
+[   21.386549][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_1m_2g4:18
+[   21.386556][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_2m_2g4:18
+[   21.386564][  T465] AICWFDBG(LOGINFO)	rwnx_send_txtwr_lvl_v3_req:lvl_11b_11ag_5m5_2g4:18
+[   21.386571][0 T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_11m_2g4:18
+[   21.386578][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_6m_2g4:18
+[   21.386585][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_9m_2g4:18
+[   21.386592][  T465] AICWFDFG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_12m_2g4:18
+[   21.386600][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_18m_2g4:18
+[   21.386606][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_24m_2g4:16
+[   21.386613][  T465] aICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_36m_2g4:16
+[   21.386621][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_48m_2g4:15
+[   21.386628][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11b_11ag_54m_2g4:15
+[   21.386635][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs0_2g4:18
+[   21.386644][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs1_2g4:18
+[   21.386651][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs2_2g4:18
+[   21.386659][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs3_2g4:18
+[   21.386666][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs4_2g4:16
+[   21.386674][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs5_2g4:16
+[   21.386681][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs6_2g4:15
+[   21.386688][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs7_2g4:15
+[   21.386695][  T465] AICWFDBG(LOGINFO)	rwn�_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs8_2g4:14
+[  "21.386702][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs9_2g4:14
+[   21.386709][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs0_2g4:18
+[   21.386716][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs1_2g4:18
+[   21.386724][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs2_2g4:18
+[   21.386731][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs3_2g4:18
+[   21.386738][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs4_2g4:16
+[   21.386744][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs5_2g4:16
+[   21.386751][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs6_2g4:15
+[   21.386758][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs7_2g4:15
+[   21.386766][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs8_2g4:14
+[   21.386772][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs9_2g4:14
+[   21.386779][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs10_2g4:13
+[   21.386786][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs11_2g4:13
+[   21.386792][  T465] AIC54�BG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_1m_5g:-128
+[   21.386799][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_2m_5g:-128
+[   21.386806][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_5m5_5g:-128
+[   21.386813][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_11m_5g:-128
+[   21.386821][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_6m_5g:18
+[   21.386828][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_9m_5g:18
+[   21.386836][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_12m_5g:18
+[   21.386842][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_18m_5g:18
+[   21.386849][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_24m_5g:16
+[   21.386856][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_36m_5g:16
+[   21.386863][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_48m_5g:15
+[   21.386870][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11a_54m_5g:15
+[   21.386877][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs0_5g:18
+[   21.386884][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs1_5g:18
+[   21.386891][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs2_5g:18
+[   21.386898][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs3_5g:18
+[   21.386904][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs4_5g:16
+[   21.386911][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs5_5g:16
+[   21.386919][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs6_5g:15
+[   21.386926][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs7_5g:15
+[   21.386933][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs8_5g:14
+[   21.386941][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11n_11ac_mcs9_5g:14
+[   21.386948][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs0_5g:18
+[   21.3869�5][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvn_v3_req:lvl_11ax_mcs1_5g:18
+[   21.386962][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs2_5g:18
+[   21.386969][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs3_5g:18
+[   21.386976][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs4_5g:16
+[   21.386983][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs5_5g:16
+[   21.387177][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs6_5g:14
+[   21.387202][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs7_5g:14
+[   21.387210][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs8_5g:13
+[   21.387216][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs9_5g:13
+[   21.387223][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs10_5g:12
+[   21.387230][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_lvl_v3_req:lvl_11ax_mcs11_5g:12
+[   21.387240][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (120)MM_SET_TXPWR_ID\_LVL_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.387257][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.387624][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x78 
+[   2q.387858}[  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   21.387888][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_txpwr_lvl_adj_req()
+[   21.387900][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:enable:0
+[   21.387908][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_2g4_chan_1_4:0
+[   21.387915][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_2g4_chan_5_9:0
+[   21.387923][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_2g4_chan_10_13:0
+[   21.387930][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_42:0
+[   21.387937][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_58:0
+[   21.387944][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_106:0
+[   21.387951][  T465] AICWFDBG(LOGINFO)	get_userconfkg_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_122:0
+[   21.387958][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_138:0
+[   21.387966][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_lvl_adj_in_fdrv:lvl_adj_5g_chan_155:0
+[   21.387972][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_msg_free()
+[   21.387981][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_txpwr_ofst2x_req()
+[   21.387991][  T465] AICWFDBG(LOGINFO)	get_userconfig_txpwr_ofst2x_in_fdrv:enable      :0
+[   21.387999][  T465] AICWFDBG(LOGINFO)	pwrofst2x 2.4g: [0]:11b, [1]:ofdm_highrate, [2]:ofdm_lowrate
+[   21.387999][  T465]   chan=	1-4	5-9	10-13
+[   21.388002][  T465] AICWFDBG(LOGINFO)	
+[   21.388002][  T465]   [0] =
+[   21.388009][  T465] AICWFDBG(LOGINFO)		0
+[   21.388015][  T465] AICWFDBG(LOGINFO)		0
+[   21.388087][  T465] AICWFDBG(LOGINFO)		0
+[   21.388102][  T465] AICWFDBG(LOGINFO)	
+[   21.388102][  T465]   [1] =
+[   21.388108][  T465] AICWFDBG(LOGINFO)		0
+[   21.388113][  T465] AICWFDBG(LOGINFO)		0
+[   21.388120][  T465] AICWFDBG(LOGINFO-		0
+[   21.388126][  T465] AICWfDBG(LOGINFO)	
+[   21.388126][  T465]   [2] =
+[   21.388132][  T465] AICWFDBG(LOGINFO)		0
+[   21.388138][  T465] AICWFDBG(LOGINFO)		0
+[   21.388144][  T465] AICWFDBG(LOGINFO)		0
+[   21.388151][  T465] AICWFDBG(LOGINFO)	
+[   21.388151][  T465] pwrofst2x 5g: [0]:ofdm_lowrate, [1]:ofdm_highrate, [2]:ofdm_midrate
+[   21.388151][  T465]   chan=	36-50	51-64	98-114	115-130	131-146	147-166
+[   21.388157][  T465] AICWFDBG(LOGINFO)	
+[   21.388157][  T465]   [0] =
+[   21.388164][  T465} AICWFDBG(LOGINFO)		0
+[   21.388170][  T465] AICWFDBG(LOGINFO)		0
+[   21.388175][  T465] AICWFDBG(LOGINFO)		0
+[   21.388182][  T465] AICWFDBG(LOGINFO)		0
+[   21.388188][  T465] AICWFDBG(LOGINFO)		0
+[   21.388193][  T465] AICWFDBG(LOGINFO)		0
+[   21.388199][  T465] AICWFDBG(LOGINFO)	
+[   21.388199][  T465]   [1] =
+[   21.388205][  T465] AICWFDBG(LOGINFO)		0
+[   21.388212][  T465] AICWFDBG(LOGINFO)		0
+[   21.388218][  T465] AICWFDBG(LOGINFO)		0
+[   21.388224][  T465] AICWFDBG(LOGINFO)		0
+[   21.388230][  T465] AICWFDBG(LOGINFO)		0
+[   21.388235][  T465] AICWFDBG(LOGINFO)		0
+[   21.388242][  T465] AICWFDBG(LOGINFO)	
+[   21.388242][  T465]   [2] =
+[   21.388247][  T465] AICWFDBG(LOGINFO)		0
+[   21.388253][  T465] AICWFDBG(LOGINFO)		0
+[   21.388259][  T465] AICWFDBG(LOGINFO)		0
+[   21.388265][  T465] AICWFDBG(LOGINFO)		0
+[   21.388270][  T465] AICWFDBG(LOGINFO)		0
+[   21.388446][  T465] AICWFDBG(LOGINFO)		0
+[   21.388470][  T465] AICWFDBG(LOGINFO)	
+[   21.388482][  T465] AICWFDBG(LOGINFO)	rwnx_send_txpwr_ofst2x_req:Do not use txpwr_ofst2x
+[   21.388489][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_msg_free()
+[   21.388498][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_rf_calib_req()
+[   21.388509][  T465] AICWFDBG(LOGINFO)	get_userconfig_xtal_cap:enable       :0
+[   21.388515][  T465] AICWFDBG(LOGINFO)	get_userconfig_xtal_cap:xtal_cap     :0
+[   21.388522][  T465] AICWFDBG(LOGINFO)	get_userconfig_xtal_cap:xtal_cap_fine:0
+[   21.388532][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (106)MM_SET_RF_CALIB_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   21.388546][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   21.573151][  T532] read descriptors
+[   21.573195][  T532] read strings
+[   22.240132][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x6a 
+[   22.240226][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.240271][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_get_macaddr_req()
+[   22.240294][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (116)MM_GET_MAC_ADDR_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.240306][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   22.240751][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x74 
+[   22.240822][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.240838][  T465] AICWFDBG(LOGINFO)	get macaddr: d8:74:ef:04:ea:8b
+[   22.240845][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_reset()
+[   22.240858][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (1)MM_RESET_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.240869][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   22.242614][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1$
+[   22.242695][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.242711][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_version_req()
+[   22.242723][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (5)MM_VERSION_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.242736][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   22.243075][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x5 
+[   22.243142][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.243159][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_set_vers()
+[   22.243184][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_me_config_req()
+[   22.243203][  T465] ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+[   22.243213][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (5121)ME_CONFIG_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.243224][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   22.243575][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1401 
+[   22.243644][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.244459][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_me_chan_config_req()
+[   22.244501][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (5123)ME_CHAN_CONFIG_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.244519][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   22.245210][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1403 
+[   22.245276][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.245777][  T465] AICWFDBG(LOGINFO)	getRegdomainFromRwnxDB set ccode:00 
+[   22.245830][  T465] AICWFDBG(LOGINFO)	rwnx_get_countrycode_channels support channel:1 2 3 4 5 6 7 8 9 10 11 12 13 14 36 40 44 48 52 56 60 64 100 104 108 112 116 120 124 128 132 136 140 144 149 153 157 161 165 
+[   22.245931][  T465] ieee80211 phy0: 
+[   22.245931][  T465] *******************************************************
+[   22.245931][  T465] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY!RULES **
+[   22.245931][  T465] *******************************************************
+[   22.245948][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_me_chan_config_req()
+[   22.245965][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (5123)ME_CHAN_CONFIG_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   22.245978][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000020753fbf7 
+[   22.246561][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1403 
+[   22.246642][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   22.246655][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_dbgfs_register()
+[   22.247080][  T465] AICWFDBG(LOGINFO)	rwnx_interface_add: wlan%d, 2, 10
+[   22.247229][  T465] AICWFDBG(LOGINFO)	interface add:d8 74 ef 4 ea 8b
+[   22.402592][  T465] AICWFDBG(LOGINFO)	New interface create wlan0 
+[   22.648693][  T532] read descriptors
+[   22.648756][  T532] read strings
+[   23.674704]{  T532] read descriptors
+[   23.674785][  T532] read strings
+[   24.697779][  T532] read descriptors
+[   24.697831][  T532] read strings
+[   25.718475][  T532] read descriptors
+[   25.718532][  T532] read strings
+[   25.719548][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   25.721333][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   25.721699][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   26.310997][  T194] logd: logdr: UID=1041 GID=1005 PID=606 n tail=0 logMask=8 pid=431 start=0ns deadline=0ns
+[   26.312338][  T194] logd: logdv: UID=1041 GID=1005 PID=606 n tail=0 logMask=1 pid=431 start=0ns deadline=0ns
+[   26.367965][    T1] init: Untracked pid 606 exited with status 0
+[   26.368113][    T1] init: Untracked pid 606 did not have an associated service entry and will not be reaped
+[   26.369994][    T1] init: Untracked pid 608 exited with status 0
+[   26.370103][    T1] init: Untracked pid 608 did not have an associated service entry and will not be reaped
+[   26.738429][  T532] read descriptors
+[   26.738478][  T532] read strings
+[   26.739395][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   26.741069][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   26.741396][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   27.383577][  T194] logd: logdr: UID=1041 GID=1005 PID=624 n tail=0 logMask=8 pid=470 start=0ns deadline=0ns
+[   27.384844][  T194] logd: logdr: UID=1041 GID=1005 PID=624 n tail=0 logMask=1 pid=470 start=0ns deadline=0ns
+[   27.441764][  T248] binder: release 470:558 transaction 1423 in, still active
+[   27.441807][  T248] binder: send failed �eply for transaction 1423 to 220:357
+[   27.759673][  T532] read descriptors
+[   27.759738][  T532] read strings
+[   28.785535][  T53r] read descriptors
+[   28.785606][  T532] read strings
+[   29.064754][  T396] AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification apexservice has clients: 1
+[   29.064856][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   29.359773][  T199] type=1400 audit(28.173:493): avc: denied { read } for comm="binder:212_1" name="wakeup4" dev="sysfs" ino=15314 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   29.360768][  T199] type=1400 audit(28.173:494): avc: denied { open } for comm="binder:212_1" path="/sys/devices/platform/ff740100.rkvdec/wakeup/wakeup4" dev="sysfs" ino=q5314 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=1
+[   29.361176][  T199] type=1400 audit(28.173:495): avc:"denied { read } for comm="binder:212_1" name="event_count" dev="sysfs" ino=15321 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   29.361501][  T199] type=1400 audit(28.173:496): avc: denied { open } for comm="binder:212_1" path="/sys/devices/platform/ff740100.rkvdec/wakeup/�akeup4/event_count" dev="sysfs" ino=15321 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   29.361861][  T199] type=1400 audit(28.173:497): avc: denied { getattr } for cmm="binder:212_1" path="/sys/devices/platform/ff740100.rkvdec/wakeup/wakeup4/event_count" dev="sysfs" ino=15321 scontext=u:r:system_suspend:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   29.806530][  T532] read descriptors
+[   29.806586][  T532] read strings
+[   30.832597][  T532] read descriptors
+[   30.832654][  T532] read strings
+[   30.833785][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys>usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   30.835636][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   30.836011][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   31.857501][  T532] read descriptors
+[   31.857552][  T532] read strings
+[   31.858544][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   31.860361][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && s}s.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   31.860702][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   31.873109][  T248] vccio_sd: disabling
+[   32.397488][  T396] apexd: Can't open /system_ext/apex for reading : No such file or directory
+[   32.397591][  T396] apexd: Can't open /product/apex for reading : No such file or directory
+[   32.397677][  T396] apexd: Can't open /vendor/apex for reading : No such file or directozy
+[   32.870920][  T532] read descriptors
+[   32.871015][  T532] read strings
+[   32.872455][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   32.874381][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   32.874837][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   33.009234][  T194] logd: logdv: UID=1041 GID=1005 PID=711 n tail=0 logMask=8 pid=642 start=0ns deadline=0ns
+[   33.053222][  T194] logd: logdr: UID=1041 GID=1005 PID=711 n tail=0 logMask=1 pid=642 start=0ns deadline=0ns
+[   33.135836][    T1] init: Untrac{ed pid 711 exited with status 0
+[   33.898243][  T532] read descriptors
+[   33.898301][  T532] read strings
+[   34.053630][  T194] logd: logdr: UID=1041 GID=1005 PID=722 n tail=0 logMask=8 pid=641 start=0ns deadline=0ns
+[   34.064571][  T396] AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification apexservice has clients: 0
+[   34.064645][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   34.071257][  T194] logd: logdr: UID=1041 GID=1005 PID=722 n tail=0 logMask=1 pid=641 start=0ns deadline=0ns
+[   34.192671][  T248] binder: release 641:656 transaction 3345 in, still active
+[   34.192720][  T248] binder: send failed reply for transaction 3345 to 220:357
+[   34.199700][  T199] type=1400 audit(33.013:498): avc: denied { call } for comm="BootAnimation" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   34.200179][  T199] type=1400 audit(33.013:499): avc: denied { transfer } for comm="BootAnimation" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   34.200562][  T199] type=1400 audit(33.013:500): avc: denied { transfer } for comm="binder:526_1" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   34.532249][  T199] type=1400`audit(33.345:501): avc: denied { getattr } for comm="binder:526_1" path="/data/system/rt_audio_config.xml" dev="mmcblk2p14" ino=3093749 scontext=u:r:mediaserver:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1
+[   34.552347][  T199] type=1400 audit(33.365:502): avc: denied { call } for comm="binder:526_1" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   34.688702][  T199] type=1107 audit(33.501:503): uid=0 auid=4294967295 ses=4294967295 subj=u:r:init:s0 msg='avc: denied { set } for property=sys.bootvideo.closed pid=220 uid=1003 gid=1003 scontext=uzr:bootanim:s1 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1'
+[   34.929545][  T532] read descriptors
+[   34.929613][  T532] read strings
+[   35.958571][  T532] read descriptors
+[   35.948647][  T532] read strings
+[   35.949942][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   35.951713][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   35.952083][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   36.976547][  T532] read descriptors
+[   36.976613][  T532] read strings
+[   36.977681][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   36.979482][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   36.979843][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config?adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   37.995756][  T532] read descriptors
+[   37.995843][  T532] read strings
+[   37.997515][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   37.999364][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   37.999750][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   39.016516][  T532] read descriptors
+[   39.016566][  T532] read strings
+[   39.017729][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   40.035536][  T532] read descriptors
+[   40.035591][  T532] read strings
+[   40.202579][  T199] type=1400 audit(39.016:506): avc: denied { call } for comm="BootAnimation" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   40.283893][  T451] healthd: battery none chg=
+[   40.373503][  T199] type=1400 audit(39.184:507): avc: denied { call } for comm="SyncFence" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   40.377131][  T199] type=1400 audit(39.186:508): avc: denied { read write } for comm="binder:220_1" name="vplay_flag" dev="sysfs" ino=23194 scontext=u:r:bootanim:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   40.377782][  T199] type=1400 audit(39.186:509): avc: denied { open } for comm="binder:220_1" path="/sys/class/fd655/vplay_flag" dev="sysfs" ino=23194 scontext=u:r:bootanim:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   40.428293][  T199] type=1400 audit(39.200:510): avc: denied { read } for comm="surfaceflinger" name="u:object_r:vendor_hwc_prop:s0" dev="tmpfs" ino=306 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:vendor_hwc_prop:s0 tclass=file permissive=1
+[   40.443984][  T199] type=1400 audit(39.200:511): avc: denied { open } for comm="surfaceflinger" path="/dev/__properties__/u:object_r:vendor_hwc_prop:s0" dev="tmpfs" ino=306 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:vendor_hwc_prop:s0 tclass=file permissive=1
+[   40.451159][  T199] type=1400 audit(39.200:512): avc: denied { getattr } for comm="surfaceflinger" path="/dev/__properties__/u:object_r:vendor_hwc_prop:s0" dev="tmpfs" ino=306 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:vendor_hwc_prop:s0 tclass=file permissive=1
+[   40.452139][  T199] type=1400 audit(39.200:513): avc: denied { map } for comm="surfaceflinger" path="/dev/__properties__/u:object_r:vendor_hwc_prop:s0" dev="tmpfs" ino=306 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:vendor_hwc_prop:s0 tclass=file permissive=1
+[   40.455960][  T199] type=1400 audit(39.207:514): avc: denied { read } for comm="HwBinder:268_2* name="u:object_r:system_prop:s0" dev="tmpfs" ino=276 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:system_prop:s0 tclass=file permissive=1
+[   40.466687][  T199] type=1400 audit(39.207:515): avc: denied { open } for comm="HwBinder:268_2" path="/dev/__properties__/u:object_r:system_prop:s0" dev="tmpfs" ino=276 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:system_prop:s0 tclass=file permissive=1
+[   41.060675][  T532] read descriptors
+[   41.060771][  T532] read surings
+[   41.062128][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/syste}/etc/init/hw/init.usb.configfs.rc:21)
+[   41.064213][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   41.065644][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 '& sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 1ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   41.477883][   T89] Freeing drm_logo memory: 12152K
+[   42.092924][  T532] read descriptors
+[   42.092999][  T532] read strings
+[   42.094518][    T1] init: processing action (sys.usb.config=adb && sys.usb.co~figfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   42.096467][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   42.096867][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   42�301283][    T1] init: processing action (sys.sysctl.extra_free_kbytes=*) from (/system/etc/init/hw/init.rc:1214)
+[   42.305563][    T1] init: starting service 'exec 18 (/system/bin/extra_free_kbytes.sh 24300)'...
+[   42.348175][    T1] init: SVC_EXEC service 'exec 18 (/system/bin/extra_free_kbytes.sh 24300)' pid 830 (uid 0 gid 0+0 context default) started; waiting...
+[   42.898804][  T611] fs-verity: sha256 using implementation "sha256-ce"
+[   43.126980][  T532] read descriptors
+[   43.127102][  T532] read strings
+[   43.327143][    T1] init: Service 'exec 18 (/system/bin/extra_free_kbytes.sh 24300)' (pid 830) exited with status 0 waiting took 0.991000 seconds
+[   44.157650][  T532] read descriptors
+[   44.157707][  T532] read strings
+[   45.185126][  T532] read descriptors
+[   45.185204][  T532] read strings
+[   46.217833][  T532] read descriptors
+[   46.217912][  T532] read strings
+[   46.219334][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   46.224648][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb &f sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   46.225256][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   46.271582][  T789] read descriptors
+[   46.271726][  T789] read strings
+[   46.272001][  T789] read descriptors
+[   46.272090][  T789] read strings
+[   46.666170][  T199] type=1400 audit(1739779562.416:523): avc: denied { read write } for comm="cec@1.0-service" name="rk_cec" dev="tmpfs" ino=475 scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   46.666619][  T199] type=1400 audit(1739779562.416:524): avc: denied { open } for comm="cec@1.0-service" path="/dev/rk_cec" dev="tmpfs" ino=475 scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   46.672895][  T199] type=1400 audit(1739779562.416:525): avc: denied { ioctl } for comm="cec@1.0-service" path="/dev/rk_cec" dev="tmpfs" ino=475 ioctlcmd=0x610a scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   46.918010][  T199] type=1400 audit(1739779562.668:526): avc: denied { execute } for comm="system_server" name="su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   46.918716][  T199] type=1400 audit(1739779562.668:527): avc: denied { read open } for comm="system_server" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   46.919430][  T199] type=1400 audit(1739779562.669:528):"avc: denied { execute_no_trans } for comm="system_server" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   46.920315][  T199] type=1400 audit(1739779562.670:529): avc: denied { map } for comm="su" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   46.922513][  T199] type=1400 audit(1739779562.674:530): avc: denied { getattr } for comm="su" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   46.940517][  T199] type=1400 audit(1739779562.692:531): avc: denied { setgid } for comm="su" capability=6 scontext=u:r:system_server:s0 tcontext=u:r:system_server:s0 tclass=capability permissive=1 bug=b/228030183
+[   46.940912][  T199] type=1400 audit(1739779562.692:532): avc: denied { setuid } for comm="su" capability=7 scontext=u:r:system_server:s0 tcontext=u:r:system_server:s0 tclass=capability permissive=1 bug=b/228030183
+[   47.241784][  T532] read descriptors
+[   47.243857][  T532] read strings
+[   47.243255][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   47.245220][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   47.245602][    T1] init: Command 'write /config/usf_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   47.316808][  T671] pvr set to 0
+[   47.536213][    T1] init: processing action (wl�n.driver.status=ok) from (/vendor/etc/init/hw/ini�.connectivity.rc:52)
+[   47.565595][    T1] init: processing action (vendor.wifi.direct.interface=p2p-dev-wlan0) from (/vendor/etc/init/hw/init.connectivity.rc:59)
+[   47.579392][    T1] init: processing action (vendor.wifi.dmrect.interface=p2p-dev-wlan0) from (/vendor/etc/init/hw/init.connectivity.rc:59)
+[   47.592214][  T421] rk_gmac-dwmac ffbd0000.ethernet eth0: PHY [stmmac-0:02] driver [RK630 PHY] (irq=POLL)
+[   47.596217][  T421] dwmac4: Master AXI performs any burst length
+[   47.596300][  T421] rk_gmac-dwmac ffbd0000.ethernet eth0: No Safety Features support found
+[   47.596324][  T421] rk_gmac-dwmac ffbd0000.ethernet eth0: PTP not supported by HW
+[   47.605003][    T1] init: processing action (vendor.wifi.direct.interface=p2p-dev-wlan0) from (/vendor/etc/init/hw/init.connectivity.rc:59)
+[   47.606186][  T421] rk_gmac-dwmac ffbd0000.ethernet eth0: configuring for phy/rmii link mode
+[   47.620506][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_open()
+[   47.620584][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_start()
+[   47.620600][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (3)MM_START_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   47.620616][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   47.621479][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x3 
+[   47.621547][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   47.621564][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_coux_req()
+[   47.621575][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (102)MM_SET_COEX_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0�
+[   47.621585][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   47.621953][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x66 
+[   47.622016][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7(
+[   47.622073][  T465] AICWFDBG(LOGDEBUG)	rwnx_open rwnx_vif->drv_flags:4
+[   47.622083][  T465] AICWFDBG(LOGTRACE)	>>> rwnx_send_add_if()
+[   47.622098][  T465] AICWFDBG(LOGTRACE)	rwnx_send_msg (7)MM_ADD_IF_CFM reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   47.622110][  T465] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   47.622525][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x7 
+[   47.622583][  T465] AICWFDBG(LOGTRAC�)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   47.622595][  T465] AICWFDBG(LOGDEBUG)	rwnx_open sta create vif in rwnx_hw->vif_table[0] 
+[   47.860497][  T926] capability: warning: `wpa_supplicant' uses 32-bit capabilities (legacy support in use)
+[   47.990864][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   47.990916][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   47.990937][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "COUNTRY HK" on wlan0
+[   47.990944][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   47.990952][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   47.990960][  T926] AICWFDBG(LOGINFO)	android_priv_cmd country code:HK
+[   47.990969][  T926] AICWFDBG(LOGINFO)	getRegdomainFromRwnxDB set ccode:HK 
+[   47.991014][  T926] AICWFDBG(LOGINFO)	rwnx_get_countrycode_channels support channel:1 2 3 4 5 6$7 8 9 10 11 12 13 36 40 44 48 52 56 60 64 100 104 108 112 116 120 124 128 132 136 140 149 153 157 161 165 
+[   47.991099][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   47.991126][  T926] AICWFDBG(LOGERROR)	Unknown command 'COUNTRY'
+[   48.011128][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   48.011184][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   48.011207][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "SETSUSPENDMODE 1" on wlan0
+[   48.011215][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   48.011222][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   48.261843][  T532] read descriptors
+[   48.261920][  T=32] read strings
+[   49.064782][  T396] AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification apexservice has clients: 1
+[   49.064871][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   49.290662][  T532] read descriptors
+[   49.290722][  T532] read strings
+[   50.318231][  T532] read descriptors
+[   50.318301][  T532] read strings
+[   51.358698][  T532] read descriptors
+[   51.358770][  T532] read strings
+[   51.359924][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   51.361870][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   51.362808][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   51.895577][  T199] type=1400 audit(1739779567.644:551): avc: denied { call } for comm="binder:220_3" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   51.938093][  T199] type=1400 audit(1739779567.688:552): avc: denied { call } for comm="SyncFence" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   52.460919][  T532] read descriptors
+[   52.460988][  T532] read strings
+[   52.462629][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   52.466406][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 1ms and failed: symlink() failed: File exists
+[   52.466999][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   52.646476][  T199] type=1400 audit(1739779568.342:553): avc: denied { call } for comm="binder:220_3" scontext=u:r:bootanim:s0 tcontext=u:r:mediiserver:s0 tclass=binder permissive=1
+[   52.646937][  T199] type=1400 audit(1739779568.356:554): avc: denied { call } for comm="SyncFence" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   53.075395][  T199] type=1400 audit(1739779568.824:555): avc: denied { call } for comm="SyncFence" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   53.099074][  T199] type=1400 audit(1739779568.840:556): avc: denied { call } for comm="binder:220_3" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   53.501335][  T532] read descriptors
+[   53.501427][  T532] read strings
+[   53.503451][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   53.505907][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   53.515942][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   53.718493][  T199] type=1400 audit(1739779569.464:557): avc: denied { read write } for comm="cec@1.0-service" name="rk_cec" dev="tmpfs" ino=475 scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   53.718986][  T199] type=1400 audit(1739779569.464:558): avc: denied { open } for comm="cec@1.0-service" path="/dev/rk_sec" dev="tmpfs" ino=475 scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   53.719475][  T199] type=1400 audit(1739779569.464:559): avc: denied { ioctl } for comm="cec@1.0-service" path="/dev/rk_cec" dev="tmpfs" ino=475 ioctlcmd=0x610b scontext=u:r:hal_tv_cec_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+[   53.967291][ `T199] type=1400 audit(1739779569.718:560): avc: granted { read } for comm="rkstack.process" name="psched" dev="proc" ino=4026532089 scontext=u:r:network_stack:s0 tcontext=u:object_r:proc_net:s0 tclass=file
+[   54.065151][  T396] AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification apexservice has clients: 0
+[   54.065299][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   54.561725][  T532] read descriptors
+[   54.561790][  T532] read strings
+[   54.563839][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   55.342934][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.342988][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   55.343011][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "BTCOEXSCAN-STOP" on wlan0
+[   55.343060][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.343071][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.343079][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.343093][  T926] AICWFDBG(LOGERROR)	Unknown command 'BTCOEXSCAN-STOP'
+[   55.344533][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.344570][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   55.344594][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "RXFILTER-STOP" on wlan0
+[   55.344601][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.344608][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.344616][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.344631][  T926] AICWFDBG(LOGERROR)	Unknown command 'RXFILTER-STOP'
+[   55.346940][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.346982][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd,)
+[   55.347001][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "RXFILTER-ADD 2" on wlan0
+[   55.347009][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.347015][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.347107][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.347124][  T926] AICWFDBG(LOGERROR)	Unknown command 'RXFILTER-ADD'
+[   55.348191][  T926] CICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.348229][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   55.348248][  T926] AICWFDBG(LOGINVO)	android_priv_cmd: Android private cmd "RXFILTER-START" on wlan0
+[   55.348255][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.348262][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.348270][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.348285][  T926] AICWFDBG(LOGERROR)	Unknown command 'RXFILTER-START'
+[   55.349917][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.349954][  T926] AICWFDBG(LOGTRCCE)	>>> android_priv_cmd()
+[   55.349971][  T926] AICWFEBG(LOGINFO)	android_priv_cmd: Android private cmd "RXFILTER-STOP" on wlan0
+[   55.349980][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.349986][  T926] AICWFDBG(LOGI^FO)	buf_size=4096
+[   55.349995][  T92�] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.350010][  T926] AICWFDBG(LOGERROR)	Unknown command 'RXFILTER-STOP'
+[   55.351372][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.351407][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   55.351428][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "RXFILTER-ADD 3" on wlan0
+[   55.351435][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   �5.351442][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.351449][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.351464][  T927] AICWFDBG(LOGeRROR)	Unknown command 'RXFILTER-ADD'
+[   55.352484][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.352522][  T926] AICWFD�G(LOGTRACE)	>>> android_priv_cmd()
+[   55.352543][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "RXFILTER-START" on wlan0
+[   55.352551][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.352558][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.352567][  T926] AICWFDBG(LOGTRACE)	>>> handle_private_cmd()
+[   55.352583][  T926] AICWFDBG(LOGERROR)	Unknown command 'RXFILTER-START'
+[   55.357218][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.357257][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_kmd()
+[   55.357279][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "SETSUSPENDMODE 1" on wlan0
+[   55.357286][  T926] AICWFDBG(LOGINFO)	cmd = 35313
+[   55.357293][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.418381][  T926] AICWFDBG(LOGINFO)	IOCTL PRIVATE
+[   55.418450][  T926] AICWFDBG(LOGTRACE)	>>> android_priv_cmd()
+[   55.418475][  T926] AICWFDBG(LOGINFO)	android_priv_cmd: Android private cmd "SETSUSPENDMODE 0" on wlan0
+[   55.418483][  T926] AICWFDBG(LOGINFO)	cmd = 35313[   55.418490][  T926] AICWFDBG(LOGINFO)	buf_size=4096
+[   55.690730][  T532] read descriptors
+[   55.690790][  T532] read strings
+[   56.159179][  T454] [BT_RFKILL]: bt shut off power
+[   56.159666][  T454] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   56.204945][  T454] [BT_RFKILL]: ENABLE UART_RTS
+[   56.313135][  T454] [BT_RFKILL]: DISABLE UART_RTS
+[   56.313217][  T454] [BU_RFKILL]: bt turn on power
+[   56.313249][  T454] [BT_RFKILL]: Request irq for bt wakeup0host
+[   56.313289][  T454] [BT_RFKILL]: ** disable irq
+[   56.314554][  T454] of_dma_request_slave_channel: dma-names"property of node '/serial@ffa00000' missing or empty
+[   56.314593][  T454] dw-apb-uart ffa00000.serial: failed to request DMA, use interrupt mode
+[   56.726644][  T532] read descriptors
+[   56.726727][  T532] read strings
+[   56.727979][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   56.730003][    T1] init: Command 'symlink /config/usb_gadget/g1/gunctions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   56.731809][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.�c:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   57.522940][    T1] init: processing action (sys.boot_completed=1) from (/system/etc/init/hw/init.rc:1205)
+[   57.525537][    T1] init: starting service 'exec 19 (/bin/rm -rf /data/per_boot)'...
+[   57.545373][    T1] init: SVC_EXEC service 'exec 19 (/bin/rm -rf /data/per_boot)' pid 1309 (uid 1000 gid 1000+0 context default) started; waiting...
+[   57.611552][ T1310] selinux: SELinux: Skipping restorecon on directory(/data/system_ce/0)
+[   57.611671][ T1310] selinux: 
+[   57.625873][ T1311] selinux: SELinux: Skipping restorecon on directory(/data/vendor_ce/0)
+[   57.625970][ T1711] selinux: 
+[   57.700854][  T199] type=1400 audit(1739779573.450:575): avc: denied { write } for comm="init" name="enabled" dev="sysfs" ino=21622 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_hdmi:s0 tclass=file permissive=1
+[   57.730761][  T199] type=1400 audit(1739779573.451:576): avc: denied { open } for comm="init" path="/sys/devices/platform/display-subsystem/drm/card0/card0-HDMI-A-1/enabled" dev="sysfs" ino=21622 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_hdmi:s0 tclass=file permissive=1
+[   57.744827][  T532] read descriptors
+[   57.744884][  T532] read strings
+[   57.763491][  T528] AICWFDBG(LOGTRACE)	>>> rwnx_cfg80211_scan()
+[   57.763646][  T528] AICWFDBG(LOGTRACE)	>>> rwnx_send_scanu_req()
+[   57.763669][  T528] CICWFDBG(LOGDEBUG)	scan channel:1(2412) 
+[   57.763676][  T528] AICWFDBG(LOGDEBUG)	scan channel:2(2417) 
+[   57.763684][  T528] AICWFDBG(LOGDEBUG)	scan channel:3(2422) 
+[   57.763691][  T528] AICWFDBG(LOGDEBUG)	scan channel:4(2427) 
+[   57.763700][  T528] AICWFDBG(LOGDEBUG)	scan channel:5(2432) 
+[   57.763707][  T528] AICWFDBG(LOGDEBUG)	scan channel:6(2437) 
+[   57.763714][  T528] AICWFDBG(LOGDEBUG)	scan channel:7(2442) 
+[   57.763720][  T528] AICWFDBG(LOGDEBUG)	scan channel:8(2447) 
+[   57.763727][  T528] AICWFDBG(LOGDEBUG)	scan channel:9(2452) 
+[   57.763733][  T528] AICWFDBG(LOGDEBUG)	scan channel:10(2457) 
+[   57.763740][  T528] AICWFDBG(LOGDEBUG)	scan channel:11(2462) 
+[   57.763747][  T528] AICWFDBG(LOGDEBUG)	scan channel:12h2467) 
+[   57.763754][  T528] AICWFDBG(LOGDEBUG)	scan channel:13(2472) 
+[   57.763761][  T528] AICWFDBG(LOGDEBUG)	scan channel:36(5180) 
+[   57.763770][  T528] AICWFDBG(LOGDEBUG)	scan channel:40(5200) 
+[   57.763779][  T528] AICWFDBG(LOGDEBUG)	scan channel:44(5220) 
+[   57.763786][  T528] AICWFDBG(LOGDEBUG)	scan channel:48(5240) 
+[   57.763792][  T528] AICWFDBG(LOGDEBUG)	scan channel:52(5260) �
+[   57.763800][  T528] AICWFDBG(LOGDEBUG)	scan channel:56(5280) 
+[   57.763807][  T528] AICWFDBG(LOGDEBUG)	scan channel:60(5300) 
+[   57.763815][  T528] AICWFDBG(LOGDEBUG)	scan channel:64(5320) 
+[   57.763822][  T528] AICWFDBG(LOGDEBUG)	scan channel:100(5500) 
+[   57.763932][  T528] AICWFDBG(LOGDEBUG)	scan channel:104(5520) 
+[   57.763953][  T528] AICWFDBG(LOGDEBUG)	scan channel:108(5540) 
+[   57.763960][  T528] AICWFDBG(LOGDEBUG)	scan channel:112(5560) 
+[   57.763967][  T528] AICWFDBG(LOGDEBUG)	scan channel:116(5580) 
+[  !57.763973][  T528] AICWFDBG(LOGDEBUG)	scan channel:120(5600) 
+[   57.763981][  T528] AICWFDBG(LOGDEBUG)	scan channel:124(5620) 
+[   57.763988][  T528] AICWFDBG(LOGDEBUG)	scan channel:128(5640) 
+[   57.763996][  T529] AICWFDBG(LOGDEBUG)	scan channel:132(5660) 
+[   57.764002][  T528] AICWFDBG(LOGDEJUG)	scan channel:136(5680) 
+[   57.764011][  T528] AICWFDBG(LOGDEBUG)	scan channel:140(5700) 
+[   57.764077][  T528] AICWFDBG(LOGDEBUG)	scan channel:149(5745) 
+[   57.764090][  T528] AICWFDBG(LOGDEBUG)	scan channel:153(5765) 
+[   57.764098][  T528] AICWFDBG(LOGDEBUG)	scan channel:157(5785) 
+[   57.764104][  T528] AICWFDBG(LOGDEBUG)	scan channel:161(5805) 
+[   57.764209][  T528] AICWFDBG(LOGDEBUG)	scan channel:165(5825) 
+[   57.764225][  T528] AICWFDBG(LOGTRACE)	rwnx_send_msg (4105)SCANU_START_CFM_ADDTIONAL reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   57.7�4243][  T528] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   57.764716][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1009 
+[   57.w77328][  T528] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   57.779282][  T199] type=1400 audit(1739779573.490:577): avc: denied { call } for comm="binder:220_3" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   57.779722][  T199] type=1400 audit(1739779573.522:578): avc: denied { call } for comm="SyncFence" scontext=u:r:mediaserver:s0 tcontext=u:r:bootanim:s0 tclass=binder permissive=1
+[   57.820822][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   57.855727][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_han�le_msg msg->id:0x4f 
+[   57.862825][  T199] type=1400 audit(1739779573.612:579): avc: denied { execu�e_no_trans } for comm="init" path="/system/bin/FD655_Demo" dev="dm-0" ino=231 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   57.890321][  T567] AICWFDBG(LOGDEBUG)	rwnx_sx_handle_msg msg->id:0x4f 
+[   57.917518][  T199] type=1401 audit(1739779573.618:580): op=security_compute_sid invalid_context="u:r:datadis:s0" scontext=u:r:init:s0 tcontext=u:object_r:datadis_exec:s0 tclass=process
+[   57.925490][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   57.947357][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.960508][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   57.962194][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.962770][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg �sg->id:0x1004 
+[   57.963149][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.963518][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.963564][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_hand|e_msg msg->id:0x1004 
+[   57.965790][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.976753][  T199] type=1401 audit(1739779573.643:581): op=security_compute_sid invalid_context="u:r:datadis:s0" scontext=u:r:init:s0 tcontext=u:object_r:datadis_exec:s0 tclass=process
+[   57.977314][  T567] �ICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.978370][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   57.982592][  T199] type=1400 audit(1739779573.649:582): avc: denied { use } for comm="devTest" path="/dev/null" dev="tmpfs" ino=10 scontext=u:r:datadis:s0 tcontext=u:r:init:s0 tclass=fd permissive=1
+[   57.994006][  T199] type=1400 audit(1739779573.650:583): avc: denied { read write } for comm="devTest" path="/dev/null" dev="tmpfs" ino=10 scontext=u:r:datadis:s0 tcontext=u:object_r:null_device:s0 tclass=chr_file permissive=1
+[   58.001294][  T199] type=1400 audit(1739779573.650:584): avc: denied { use } for comm="devTest" path="/system/bin/devTest" dev="dm-0" ino=303 scontext=u;r:datadis:s0 tcontext=u:r:init:s0 tclass=fd permissive=1
+[   58.012483][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   58.014946][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.020172][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   58.049881][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.087449][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.119905][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.154959][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.194947][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   58.209992][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.244985][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.300747][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.302412][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1104 
+[   58.355268][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.390360][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.445=98][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.480299][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.515181][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.550172][  T567] AICWFDBG(LOGDEBUG)	rwnz_rx_handle_msg msg->id:0x4f 
+[   58.586753][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.618933][ T1335] audit_log_lost: 341 callbacks suppressed
+[   58.618942][ T1335] audit: audit_lost=118 audit_rate_limit=5 audit_backlog_limit=64
+[ � 58.619009][ T1335] audit: rate limit exceeded
+[   58.623488][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.655258][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.664106][    T1] zram0: detected capacity change from 0 to 1230147584
+[   58.694382][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58/725269][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.760226][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.768823][  T532] read descriptors
+[   58.768899][  T532] read strings
+[   58.775872][    T1] mkswap: Swapspace size: 1201312k, UUID=10b525f6-c2c3-4186-b85c-5a5403d7803c
+[   58.789224][    T1] Adding 1201312k swap on /dev/block/zram0.  Priority:-2 extents:1 across:1201312k SS
+[   58.795385][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.830312][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.865523][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.900303][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.935366][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   58.970439][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.005423][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx�handle_msg msg->id:0x4f 
+[   59.040363][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.064574][  T396] AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification apexservice has clients: 1
+[   59.064664][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   59.102644][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.150445][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.205557][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.240592][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   59.240644][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1001 
+[   59.240654][  T567] AICWFDBG(LOGTRACE)	>>> rwnx_rx_scanu_start_cfm()
+[   59.808707][  T532] read descriptors
+[   59.808776][  T532] read strings
+[   60.864397][  T532] read descriptors
+[   60.864462]{  T532] read strings
+[   61.900741][  T532] read descriptors
+[   61.900829][  T532] read strings
+[   61.903382][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/xw/init.usb.configfs.rc:21)
+[   61.906539][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 1ms and failed: symlink() failed: File exists
+[   61.906988][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   62.709588][ T1713] audit: audit_nost=138 audit_rate_limit=5 audit_backlog_limit=64
+[   62.711297][ T1713] audit: rate limit exceeded
+[   62.741815][  T199] type=1400 audit(1739779578.438:727): avc: denied { execute } for comm="system_server" name="su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   62.746316][  T199] type=1400 audit(1739779578.438:728): avc: denied { read open } for comm="system_server" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1M
+[   63.101548][  T199] type=1400 audit(1739779578.852:740): avc: denied { getattr } for comm="FotaInitTask" path="/data/ota_package" dev="mmcblk2p14" ino=581065 scontext=u:r:system_app:s0 tcontext=u:object_r:ota_package_file:s0 tclass=dir permissive=1
+[   63.296022][  T532] read descriptors
+[   63.296145][  T532] read strings
+[   63.302475][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   63.304445][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   63.304829][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   63.339997][  T199] type=1400 audit(1739779579.091:741): avc: denied { call } for comm="BootAnimation" scontext=u:r:bootanim:s0 tcontext=u:r:mediaserver:s0 tclass=binder permissive=1
+[   63.866010][  T199] type=1400 audit(1739779579.617:742): avc: denied { open } for comm="FD655_Demo" path="/sys/class/fd655/vpause_flag" dev="sysfs" ino=23195 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   64.064820][  T396] AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification apexservice has clients: 0
+[   64.064915][  T396] AidlLazyServiceRegistrar: Shutdown prevented by forcePersist override flag.
+[   64.089631][  T199] type=1400 audit(1739779579.794:743): avc: denied { execute_no_trans } for comm="sh" path="/system/bin/wm" dev="dm-0" ino=657 scontext=u:r:system_server:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   64.097314][ T1813] audit: audit_lost=149 audit_rate_limit=5 audit_backlog_limit=64
+[   64.097359][ T1813] audit: rate limit exceeded
+[   64.330677][  T532] read descriptors
+[   64.330775][  T532] read strings
+[   64.332320][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   64.339022][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 5ms and failed: symlink() failed: File exists
+[   64.339496][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   64.527122][  T199] type=1400 audit(1739779579.849:744): avc: denied { execute } for comm="sh" name="sh" dev="dm-0" ino=557 scontext=u:r:system_server:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   64.529583][  T199] type=1400 audit(1739779579.874:747): avc: denied { getattr } for comm="wm" path="/system/bin/sh" dev="dm-0" ino=557 scontext=u:r:system_server:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   64.530060][  T199] type=1400 audit(1739779580.241:748): avc: denied { getattr } for comm="sh" path="/system/bin/sh" dev="dm-0" ino=557 scontext=u:r:system_server:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   64.530448][  T199] type=1400 audit(1739779580.242:749): avc: denied { execute } for comm="sh" name="sh" dev="dm-0" ino=557 scontext=u:r:system_server:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   65.094486][    T1] init: Service 'bootanim' (pid 220) exited with status 0 oneshot service took 60.541000 seconds in background
+[   65.407074][  T532] read descriptors
+[   65.407163][  T532] read strings
+[   65.635991][ T2015] audit: audit_lost=172 audit_rate_limit=5 audit_backlog_limit=64
+[   65.636201][ T2015] audit: rate limit exceeded
+[   66.441361][  T284] apexd: Deleting unused dm device com.android.btservices
+[   66.479893][  T284] apexd: Deleting unused dm device com.android.i18n
+[   66.502156][  T532] read descriptors
+[   66.502238][  T532] read strings
+[   66.514290][  T284] apexd: Deleting unused dm device com.android.runtime
+[   66.635786_[  T284] apexd: Dele�ing unused dm device com.android.apex.cts.shim
+[   66.638965][ T1321] audit: audit_lost=179 audit_rate_limit=5 audit_backlog_limit=64
+[   66.639015][ T1321] audit: rate limit exceeded
+[   66.644875][  T284] apexd: Deleting unused dm device com.android.tzdata
+[   66.678665][  T284] apexd: Deleting unused dm device com.android.vndk.v33
+[   66.73813�][  T284] apexd: Deleting unused dm device com.google.mainline.primary.libs
+[   66.808817][  T284] AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+[   66.814213][  T284] printk: apexd: 111 output lines suppressed due to ratelimiting
+[   67.670771][  T532] read descriptors
+[   67.670843][  T532] read strings
+[   67.677129][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   67.679216][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/initohw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: Fi�e exists
+[   67.685728][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 1ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   67.840771][  T199] type=1400 audit(1739779583.590:799): avc: denied { execute } for comm="Thread-21" name="su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   67.842718][  T199] type=1400 audit(1739779583.590:800): avc: denied { read open } for comm="Thread-21" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   67.874315][ T2179] audit: audit_lost=188 a}dit_rate_limit=5 audit_backlog_limit=64
+[   67.874375][ T2179] audit: rate limit exceeded
+[   67.985695][  T199] type=1400 audit(1739779583.591:801): avc: denied { execute_no_trans } for comm="Thread-21" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   67.986517][  T199] type=1400 audit(1739779583.591:802): avc: denied { map } for comm="su" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tc�ass=file permissive=1
+[   67.987195][  T199] type=1400 audit(1739779583.594:803): avc: denied { getattr } for comm="su" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_server:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   68.765811][  T532] read descriptors
+[   68.765888][  T532] read strings
+[   68.767548][    T1] init: processing a�tion (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   68.769622][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usbnconfigfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   68.770023][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   68.876380][  T199] type=1400 audit(1739779584.627:1316): avc: granted { execute } for comm="pool-1-temporar" name="daemon2.bin" dev="mmcblk2p14" ino=155 scontext=u:r:untrusted_app:s0:c74,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c74,c256,c512,c768 tclass=file app=com.apkpure.aegon
+[   68.957105][  T199] type=1400 audit(1739779584.701:1317): avc: denied { dac_read_search } for comm="ps" capability=2 scontext=u:r:system_server:s0 tcontext=u:r:system_server:s0 tclass=capability permissive=1 bug=b/228030183
+[   69.260855][ T2293] qudit: audit_lost=700 audit_rate_limit=5 audit_backlog_limit=64
+[   69.261542][ T2293] audit: rate limit exceeded
+[   69.265919][  T199] type=1400 audit(1739779585.011:1318): avc: denied { execute } for comm="uyao.elf.center" name="su" dev="dm-0" ino=3025 scontext=u:r:system_app:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   69.267615][  T199] type=1400 audit(1739779585.012:1319): avc: denied { read open } for comm="uyao.elf.center" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_app:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   69.353373][  T199] type=1400 audit(1739779585.012:13r0): avc: denied { execute_no_trans } for comm="uyao.elf.center" path="/system/xbin/su" dev="dm-0" ino=3025 scontext=u:r:system_app:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   69.812026][  T532] read descriptors
+[   69.812152][  T�32] read strings
+[   69.815583][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   69.817664][    T1] init: Command 'symlynk /config/usb_gadget/g1/functions/ffs.adb /confiw/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   69.818091][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   70.379205][ T2406] audit: audit_lost=706 audit_rate_limit=5 audit_backlog_limit=64
+[   70.379390][ T2406] audit: rate limit exceeded
+[   70.925821][  T532] read descriptors
+[   70.925893][  T532] read strings
+[   70.928648][!   T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   71.708398][ T2464] audit: audit_lost=729 audit_rate_limit=5 audit_backlog_limit=64
+[   71.708487][ T2464] audit: rate limit exceeded
+[   72.705259][  T532] read descriptors
+[   72.705340][  T532] read strings
+[   72.708343][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   72.710370][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   72.710765][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.confi�fs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   72.750711][ T2575] audit: audit_lost=737 audit_rate_limit=5 audit_backlog_limit=64
+[   72.750784][ T2575] audit: rate limit exceeded
+[   73.296989][  T199] type=1400 audit(1739779589.046:1382): avc: denied { setattr } for comm="chmod" name="adTrack" dev="mmcblk2p14" ino=204870 scontext=u:r:system_app:s0 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=1
+[   73.297803][  T199] type=1400 audit(1739779589.047:1383): avc: denied { fowner } for comm="chmod" capability=3 scontext=u:r:system_app:s0 tcontext=u:r:system_app:s0 tclass=capability permissive=1
+[   73.300029][  T199] type=1400 audit(1739779589.047:1384): avc: denied { read } for comm="chmod" name="adTrack" dev="mmcblk2p14" ino=204870 scontext=u:r:system_app:s0 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=1
+[   73.300501][  T199] type=1400 audit(1739779589.047:1385): avc: denied { open } for comm="chmod" path="/data/local/system/elf/task/adTrack" dev="mmcblk2p14* ino=204870 scontext=u:r:system_app:s0 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=1
+[   73.504186][  T199] type=1400 audit(1739779589.249:1386): avc: denied { execute } for comm="uyao.elf.center" name="su" dev="dm-0" ino=3025 scontext=u:r:system_app:s0 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1
+[   73.969761][  T532] read descriptors
+[   73.969844][  T532] read strings
+[ 0 73.971451][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   73.973418][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   73.973806][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   74.794253][  T199] type=1400 audit(1739779590.545:1393): avc: denied { open } for comm="FD655_Demo" path="/sys/class/fd655/vpause_flag" dev="sysfs" ino=23195 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   75.174371][  T532] read descriptors
+[   75.174463][  T532] read strings
+[   75.176334][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   75.178661][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   75.179275][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'J[   76.247694][  T532] read descriptors
+[   76.247830][  T532] read strings
+[   76.249616][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   76.730154][  T199] type=1400 audit(1739779592.481:1394): avc: denied { open } for comm="FD655_Demo" path="/sys/class/fd655/vpause_flag" dev="sysfs" ino=23195 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   77.300136][  T532] read descriptors
+[   77.300218][  T532] read strings
+[   77.705682][  T528] AICWFDBG(LOGTRACE)	>>> rwnx_cfg80211_scan()
+[   77.705843][  T528] AICWFDBG(LOGTRACE)	>>> rwnx_send_scanu_req()
+[   77.705868][  T528] AICWFDBG(LOGDEBUG)	scan channel:1(2412) 
+[   77.705875][  T528] AICWFDBG(LOGDEBUG)	scan channel:2(2417) 
+[   77.705883][  T528] AICWFDBG(LO�DEBUG)	scan channel:3(2422) 
+[   77.705889][  T528] AICWFDBG(LOGDEBUG)	scan channel:4(2427) 
+[   77.705896][  T528] AICWFDBG(LOGDEBUG)	scan channel:5(2432) 
+[   77.705904][  T528] AICWFDBG(LOGDEBUG)	scan channel:6(2437) 
+[   77.705911][  T528] AICWFDBG(LOGDEBUG)	scan channel:7(2442) 
+[   77.705919][  T528] AICWFDBG(LOGDEBUG)	scan channel:8(2447) 
+[   77.705925][  T528] AICWFDBG(LOGDEBUG)	scan channel:9(2452) 
+[   77.705931][  T528] AICWFDBG(LOGDEBUG)	scan channel:10(2457) 
+[   77.705938][  T528] AICWFDBG(LOGDEBUG)	scan channel:11(2462) 
+[   77.705945][  T528] AICWFDBG(LOGDEBUG)	scan channel:12(2467) 
+[   77.705952][  T528] AICWFDBG(LOGDEBUG)	scan channel:13(2472) 
+[   77.705959][  T528] AICWFDBG(LOGDEBUG)	scan channel:36(5180) 
+[   77.705966][  T528] AICWFDBG(LOGDEBUG)	scan channel:40(5200) 
+[   77.705973][  T528] AICWFDBG(LOGDEBUG)	scan channel:44(5220) 
+[   77.705979][  T528] AICWFDBG(LOGDEBUG)	scan channel:48(5240) 
+[   77.705986][  T528] AICWFDBG(LOGDEBUG)	scan channel:52(5260) 
+[   77.705993][  T528] AICWFDBG(LOGDEBUG)	scan channel:56(5280) 
+[   77.705999][  T528] AICWFDBG(LOGDEBUG)	scan channel:60(5300) 
+[   77.707273][  T528] AICWFDBG(LOGDEBUG)	scan channel:64(5320) 
+[   77.707356][  T528] AICWFDBG(LOGDEBUG)	scan channel:100(5500) 
+[   77.707363][  T528] AICWFDBG(LOGFEBUG)	scan channel:104(5520) 
+[   77.707370][  T528] AICWFDBG(LOGDEBUG)	scan channel:108(5540) 
+[   77.707377][  T528] AICWFDBG(LOGDEBUG)	scan channel:112(5560) 
+[   77.707384][  T528] AICWFDBG(LOGDEBUG)	scan channel:116(5580) 
+[   77.707391][  T528] AICWFDBG(LOGDEBUG)	scan channel:120(5600) 
+[   77.707398][  T528] AICWFDBG(LOGDEBUG)	scan channel:124(5620) 
+[   77.707405][  T528] AICWFDBG(LOGDEBUG)	scan channel:128(5640) 
+[   77.707412][  T528] AICWFDBG(LOGDEBUG)	scan channel:132(5660) 
+[   77.707419][  T528] AICWFDBG(LOGDEBUG)	scan channel:136(5680) 
+[   77.707426][  T528] AICWFDBG(LOGDEBUG)	scan channel:140(5700) 
+[   77.707433][  T528] AICWFDBG(LOGDEBUG)	scan channel:149(5745) 
+[   77.707439][  T528] AICWFDBG(LOGDEBUG)	scan channel:153(5765) 
+[   77.707446][  T528] AICWFDBG(LOGDEBUG)	scan channel:157(5785) 
+[   77.707453][  T528] AICWFDBG(LOGDEBUG)	scan channel:161(5805) 
+[   77.707460][  T528] AICWFDBG(LOGDEBUG)	scan channel:165(5825) 
+[   77.707471][  T528] AICWFDBG(LOGTRACE)	rwnx_send_msg (4105)SCANU_START_CFM_ADDTIONAL reqcfm:1 in_irq:0 in_softirq:0 in_atomic:0
+[   77.707488][  T528] AICWFDBG(LOGTRACE)	rwnx_cmd_malloc get cmd_array[0]:000000000753fbf7 
+[   77.707938][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1009 
+[   77.708389][  T528] AICWFDBG(LOGTRACE)	rwnx_cmd_free cmd_array[0]:000000000753fbf7 
+[   77.763152][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.798143][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.833229][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.868193][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.903151][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.905520][ �T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.906122][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.908644][  T567] AYCWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.912761][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.916973][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.931330][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.939940][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.940321][  T567] AICWFDBG(LOGDEBUG)	rwnx_ry_handle_msg msg->id:0x1004 
+[   77.940740][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.943494][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.946071][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   77.963515][  T567] AICWFdBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   77.993191][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.028207][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.060208][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   78.063208][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.066923][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   78.080232][  T199] type=1400 audit(1739779593.831:1395): avc: denied { open } for comm="FD655_Demo" path="/sys/class/fd655/vpause_flag" dev="sysfs" ino=23195 scontext=u:r:init:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+[   78.098251][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.153229][  T567} AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.188342][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.247647][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.247716][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1004 
+[   78.298410][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.325874][  T532] read descriptors
+[   78.325957][  T532] read strings
+[   78.328487][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   78.330593][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   78.331729][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   78.335290][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.388304][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+I/TA: (read_securedata) filename(CertificateChain.EC.0) !
+[   78.426311][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+I/TA: TEE_ITEM_NOT_FOUND return !
+I/TA: (read_data_from_uboot_ta) filename(CertificateChain.EC.0) ! reade_name_size:21
+E/TA:  read_data_from_uboot_ta:629 TEE_InvokeTACommand returned 0xffff0008
+I/TA: ok read_data_size;2048
+I/TA: (read_securedata) filename(CertificateChain.EC.1) !
+I/TA: TEE_ITEM_NOT_FOUND return !
+I/TA: (read_data_from_uboot_ta) filename(CertificateChain.EC.1) ! reade_name_size:21
+[   78.458377][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+E/TA:  read_data_from_uboot_ta:629 TEE_InvokeTACommand returned 0xffff0008
+I/TA: ok read_data_size:2048
+I/TA: (read_securedata) filename(CertificateChain.EC.2) !
+I/TA: TEE_ITEM_NOT_FOUND return !
+I/TA: (read_data_from_uboot_ta) filename(CertificateChain.EC.2) ! reade_name_size:21
+[   78.493321][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+E/TA:  read_data_from_uboot_ta:629 TEE_InvokeTACommand returned 0xffff0008
+I/TA: ok read_data_size:2048
+[   78.528452][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.563402][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.599452][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.633490][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.668839][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.703482][  T567] AICWFDBG(LOGDECUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.738542][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.773578][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.808630][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.843607][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.878619][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.913678][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.948709][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   78.983643][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   79.038694][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   79.093769][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   79.148765][  T567] AICWFDBG(LOGEEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   79.193688][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x4f 
+[   79.193743][  T567] AICWFDBG(LOGDEBUG)	rwnx_rx_handle_msg msg->id:0x1001 
+[   79.193752][  T567] AICWFDBG(LOGTRACE)	>>> rwnx_rx_scanu_start_cfm()
+[   79.386772][  T532] read descriptors
+[   79.386851][  T532] read strings
+[   79.389797][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   79.391652][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb/configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   79.392098][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usb.controller}'
+[   79.649379][  T199] type=1400 audit(1739779595.400:1396): avc: denied { read } for comm=62674578656375746F72202332 name="u:object_r:serialno_prop:s0" dev="tmpfs" ino=258 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:serialno_prop:s0 tclass=file permissive=1 app=com.android.vending
+[   79.651113][  T199] type=1400 audit(1739779595.400:1397): avc: denied { open } for comm=62674578656375746F72202332 path="/dev/__properties__/u:object_r:serialno_prop:s0" dev="tmpfs" ino=258 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:serialno_prop:s0 tclass=file permissive=1 app=com.android.vending
+[   79.660338][  T199] type=1400 audit(1739779595.400:1398): avc: denied { getattr } for comm=62674578656375746F72202332 path="/dev/__properties__/u:object_r:serialno_prop:s0" tev="tmpfs" ino=258 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:serialno_prop:s0 tclass=file permissive=1 app=com.android.vending
+[   79.660816][  T199] type=1400 audit(1739779595.400:1399): avc: denied { map } for comm=62674578656375746F722023s2 path="/dev/__properties__/u:object_r:serialno_prop:s0" dev="tmpfs" ino=258 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:serialno_prop:s0 tclass=file!permissive=1 app=com.android.vending
+[   79.679442][  T199] type=1400 audit(1739779595.428:1400): avc: denied { search } for comm="ValueStore-3" name="/" dev="mmcblk2p11" ino=2 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:metadata_file:s0 tclass=dir permissive=1 app=com.android.vending
+[   80.531646][  T532] read descriptors
+[   80.531744][  T532] read strings
+[   80.533640][    T1] init: processing action (sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1) from (/system/etc/init/hw/init.usb.configfs.rc:21)
+[   80.535602][    T1] init: Command 'symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:23) took 0ms and failed: symlink() failed: File exists
+[   80.536015][    T1] init: Command 'write /config/usb_gadget/g1/UDC ${sys.usb.controller}' action=sys.usb.config=adb && sys.usb.configfs=1 && sys.usb.ffs.ready=1 (/system/etc/init/hw/init.usb.configfs.rc:24) took 0ms and failed: property 'sys.usb.controller' doesn't exist while expanding '${sys.usbncontroller}'

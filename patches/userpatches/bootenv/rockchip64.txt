@@ -1,0 +1,7 @@
+verbosity=1
+bootlogo=false
+
+# UART0 is the exposed USB-UART header.  The generic Rockchip boot script
+# would otherwise select UART2 for serial output.
+console=display
+extraargs=cma=256M console=ttyS0,1500000

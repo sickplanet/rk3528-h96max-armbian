@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/dts-v1/;
+
+#include "rk3528-h96max-stock-rails.dts"
+
+/ {
+	model = "H96 Max RK3528";
+	compatible = "h96,h96max-rk3528", "rockchip,rk3528";
+
+	aliases {
+		ethernet0 = &gmac0;
+	};
+};
+
+/* HT2's external-RGMII gmac1 reset pin is PWM7 on this board. */
+&gmac1 { status = "disabled"; };
+
+/* RK3528's base DTS describes the H96 RMII/RK630 PHY wiring. */
+&gmac0 { status = "okay"; };
