@@ -1,0 +1,60 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/dts-v1/;
+
+#include "rk3528-h96max-stock-rails-net-hdmi.dts"
+
+/ {
+	model = "H96 Max RK3528 with SeekWave EA6521QF";
+	compatible = "h96,h96max-rk3528", "rockchip,rk3528";
+
+	/*
+	 * SeekWave SV6160/EA6521QF SDIO bootstrap device.
+	 * GPIO numbers below are from the H96 Max stock Android DT/log:
+	 *   GPIO50: BT wake -> host (input to the SoC)
+	 *   GPIO44: host -> chip wake
+	 *   GPIO38: combo-chip enable / WLAN_REG_ON
+	 * dma_type 1 is ADMA in the SeekWave driver.
+	 * Keep this as a root platform device: skw_bootcoms binds to this node.
+	 */
+	seekwcn_boot: seekwcn_boot {
+		compatible = "seekwave,sv6160";
+		dma_type = <1>;
+		gpio_host_wake = <&gpio1 RK_PC2 GPIO_ACTIVE_HIGH>;
+		gpio_chip_wake = <&gpio1 RK_PB4 GPIO_ACTIVE_HIGH>;
+		gpio_chip_en = <&gpio1 RK_PA6 GPIO_ACTIVE_HIGH>;
+		status = "okay";
+	};
+};
+
+/*
+ * Start conservatively at 50 MHz (SD high-speed, no SDR104) while bringing
+ * up the EA6521QF. The inherited HT2 DTS already supplies the SDIO0 bus4,
+ * command and clock pinctrl groups and the mmc-pwrseq reference.
+ */
+&sdio0 {
+	max-frequency = <50000000>;
+	/delete-property/ sd-uhs-sdr104;
+	/delete-property/ sd-uhs-sdr50;
+	/delete-property/ sd-uhs-sdr25;
+	/delete-property/ sd-uhs-sdr12;
+};
+
+/* The generic Rockchip WLAN rfkill node is for the inherited HT2 module.
+ * Avoid competing power control / GPIO ownership; SeekWave owns WLAN power. */
+&wireless_wlan {
+	status = "disabled";
+};
+
+/* Stock Android reports BT,wake_gpio=44 (GPIO1_PB4), not the HT2 PC0 pin. */
+&pinctrl {
+	wireless-bluetooth {
+		bt_wake_gpio_h96: bt-wake-gpio-h96 {
+			rockchip,pins = <1 RK_PB4 RK_FUNC_GPIO &pcfg_pull_none>;
+		};
+	};
+};
+
+&wireless_bluetooth {
+	pinctrl-0 = <&uart2m1_rtsn &bt_reset_gpio &bt_wake_gpio_h96 &bt_host_wake_irq>;
+	BT,wake_gpio = <&gpio1 RK_PB4 GPIO_ACTIVE_HIGH>;
+};

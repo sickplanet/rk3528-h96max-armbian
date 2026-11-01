@@ -1,0 +1,10 @@
+EA6521QF_SEEKWAVE_R00005.bin
+Source: CoreELEC/CoreELEC
+Commit: 98a729b80ece21a7ceb8dbab127a6d19a6cff60a
+Patch: projects/Amlogic-ce/packages/linux-drivers/amlogic/EA6X21QX/patches/0002-update-firmware.patch
+Git blob SHA-1: 5c4ed8138aa81e77281b7a2b2ccf6cd05361eff4
+Size: 428 bytes
+
+The binary is the exact Git binary-patch result from the CoreELEC patch above.
+The SeekWave driver source is fetched separately at the pinned commit recorded
+in ea6x21q-dkms.sh.
